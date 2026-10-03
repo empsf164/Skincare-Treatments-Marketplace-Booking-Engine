@@ -37,11 +37,21 @@
 /* Tablet Landscape & Below (<= 1024px) */
 @media (max-width: 1024px) {
   .navbar-nav-main {
-    display: none; /* Switch to mobile drawer */
+    display: none !important; /* Switch to mobile drawer */
+  }
+
+  /* Hide all buttons & badges from header in mobile & tab views */
+  .navbar-actions .btn,
+  .navbar-actions .btn-primary,
+  .navbar-actions .btn-secondary,
+  .navbar-actions .btn-outline-secondary,
+  .navbar-actions .badge-lumea,
+  .navbar-actions span.badge-lumea {
+    display: none !important;
   }
 
   .btn-hamburger {
-    display: inline-flex;
+    display: inline-flex !important;
   }
 
   .hero-search-grid {
@@ -88,6 +98,101 @@
 
   .step-label {
     font-size: 0.72rem;
+  }
+}
+
+/* ==========================================================================
+   Tablet & 1024px Views: 2 Cards Per Row with Centered Odd Trailing Card
+   ========================================================================== */
+@media (min-width: 576px) and (max-width: 1024px) {
+  /* Parent rows containing card grids */
+  main section .row:not(.footer-bottom):not(.navbar-container):not(.controls-bar-row),
+  main .container > .row:not(.footer-bottom):not(.navbar-container):not(.controls-bar-row),
+  #treatmentsGridMount,
+  #providersGridMount,
+  #journalGridMount {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+
+  /* Force 2 cards per row (50% width) for multi-card columns */
+  main section .row:not(.controls-bar-row) > .col-lg-4,
+  main section .row:not(.controls-bar-row) > .col-md-4,
+  main section .row:not(.controls-bar-row) > .col-lg-3,
+  main section .row:not(.controls-bar-row) > .col-md-3,
+  main section .row:not(.controls-bar-row) > .col-xl-3,
+  main section .row:not(.controls-bar-row) > .col-xl-4,
+  main section .row:not(.controls-bar-row) > .col-md-6,
+  main section .row:not(.controls-bar-row) > .col-lg-6,
+  main section .row:not(.controls-bar-row) > .col-6,
+  main .container > .row:not(.controls-bar-row) > .col-lg-4,
+  main .container > .row:not(.controls-bar-row) > .col-md-4,
+  main .container > .row:not(.controls-bar-row) > .col-lg-3,
+  main .container > .row:not(.controls-bar-row) > .col-md-3,
+  main .container > .row:not(.controls-bar-row) > .col-xl-3,
+  main .container > .row:not(.controls-bar-row) > .col-xl-4,
+  main .container > .row:not(.controls-bar-row) > .col-md-6,
+  main .container > .row:not(.controls-bar-row) > .col-lg-6,
+  #treatmentsGridMount > div,
+  #providersGridMount > div,
+  #journalGridMount > div {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+  }
+
+  /* Center the last odd child in any section card grid */
+  main section .row:not(.controls-bar-row) > .col-lg-4:last-child:nth-child(odd),
+  main section .row:not(.controls-bar-row) > .col-md-4:last-child:nth-child(odd),
+  main section .row:not(.controls-bar-row) > .col-lg-3:last-child:nth-child(odd),
+  main section .row:not(.controls-bar-row) > .col-md-3:last-child:nth-child(odd),
+  main section .row:not(.controls-bar-row) > .col-xl-3:last-child:nth-child(odd),
+  main section .row:not(.controls-bar-row) > .col-xl-4:last-child:nth-child(odd),
+  main section .row:not(.controls-bar-row) > .col-md-6:last-child:nth-child(odd),
+  main section .row:not(.controls-bar-row) > .col-lg-6:last-child:nth-child(odd),
+  main section .row:not(.controls-bar-row) > .col-6:last-child:nth-child(odd),
+  main .container > .row:not(.controls-bar-row) > .col-lg-4:last-child:nth-child(odd),
+  main .container > .row:not(.controls-bar-row) > .col-md-4:last-child:nth-child(odd),
+  main .container > .row:not(.controls-bar-row) > .col-lg-3:last-child:nth-child(odd),
+  main .container > .row:not(.controls-bar-row) > .col-md-3:last-child:nth-child(odd),
+  main .container > .row:not(.controls-bar-row) > .col-xl-3:last-child:nth-child(odd),
+  main .container > .row:not(.controls-bar-row) > .col-xl-4:last-child:nth-child(odd),
+  main .container > .row:not(.controls-bar-row) > .col-md-6:last-child:nth-child(odd),
+  main .container > .row:not(.controls-bar-row) > .col-lg-6:last-child:nth-child(odd),
+  #treatmentsGridMount > div:last-child:nth-child(odd),
+  #providersGridMount > div:last-child:nth-child(odd),
+  #journalGridMount > div:last-child:nth-child(odd) {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Specific structure exclusions */
+  .col-12,
+  .col-lg-12,
+  .col-md-12,
+  .col-lg-7,
+  .col-lg-8,
+  .col-lg-5,
+  .col-md-7,
+  .col-md-5,
+  .hero-search-col,
+  form .row > *,
+  .lumea-footer .row > *,
+  .controls-bar-row > *,
+  .sticky-booking-sidebar,
+  .booking-summary-col {
+    flex: initial !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .lumea-footer .row {
+    justify-content: flex-start !important;
   }
 }
 

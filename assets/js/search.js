@@ -12,7 +12,7 @@
       title: 'Hydrafacial vs. Microneedling: Which Is Right for Your Skin Goals?',
       category: 'Treatment Guides',
       readTime: '5 min read',
-      image: 'https://images.unsplash.com/photo-1512290900672-1f02e6a0d4c8?auto=format&fit=crop&w=400&q=80',
+      image: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=400&q=80',
       url: 'resource-details.html?id=guide-hydrafacial-vs-micro'
     },
     {

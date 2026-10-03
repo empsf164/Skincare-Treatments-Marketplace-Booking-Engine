@@ -6,6 +6,9 @@
   <title>Provider Discovery — LUMÉA Skincare</title>
   <meta name="description" content="Explore verified dermatology clinics, master estheticians, and skin specialists with real-time appointment availability.">
   
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -33,14 +36,11 @@
         <li class="nav-item-lumea"><a href="providers.html" class="nav-link-lumea active">Providers</a></li>
         <li class="nav-item-lumea"><a href="resources.html" class="nav-link-lumea">Journal</a></li>
         <li class="nav-item-lumea"><a href="about.html" class="nav-link-lumea">About</a></li>
+        <li class="nav-item-lumea"><a href="contact.html" class="nav-link-lumea">Contact</a></li>
       </ul>
 
       <div class="navbar-actions">
-        <button type="button" class="btn-search-trigger" aria-label="Search"><i class="bi bi-search"></i></button>
-        <button type="button" class="btn-theme-toggle" aria-label="Theme toggle"><i class="bi bi-moon-stars-fill"></i></button>
-        <a href="my-bookings.html" class="btn-favorites-nav" aria-label="Saved"><i class="bi bi-heart"></i><span class="fav-counter-badge" style="display:none;">0</span></a>
-        <div id="navbarAuthActions" class="d-inline-flex align-items-center gap-2"></div>
-        <a href="booking.html" class="btn btn-primary d-none d-lg-inline-flex">Book a Treatment</a>
+        <a href="signup.html" class="btn btn-primary">Sign Up</a>
         <button type="button" class="btn-hamburger" aria-label="Mobile menu"><i class="bi bi-list"></i></button>
       </div>
     </div>
@@ -62,31 +62,34 @@
         <li class="mobile-nav-item"><a href="treatments.html" class="mobile-nav-link">Treatments</a></li>
         <li class="mobile-nav-item"><a href="providers.html" class="mobile-nav-link active">Providers</a></li>
         <li class="mobile-nav-item"><a href="resources.html" class="mobile-nav-link">Journal</a></li>
-        <li class="mobile-nav-item"><a href="my-bookings.html" class="mobile-nav-link">My Bookings</a></li>
+        <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About</a></li>
+        <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact</a></li>
       </ul>
+      <div class="mt-4 pt-3 border-top">
+        <a href="signup.html" class="btn btn-primary w-100">Sign Up</a>
+      </div>
     </div>
   </aside>
 
   <main style="padding-top: calc(var(--navbar-height) + 20px);">
-    <section class="section-padding-sm bg-surface-subtle border-bottom">
-      <div class="container">
-        <div class="row align-items-center g-4">
-          <div class="col-lg-6">
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb small mb-2">
-                <li class="breadcrumb-item"><a href="index.html" class="text-muted text-decoration-none">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Providers</li>
-              </ol>
-            </nav>
-            <h1 class="h2 mb-1" style="font-family: var(--font-display);">Verified Skincare Specialists & Clinics</h1>
-            <p class="text-muted small mb-0">Browse certified dermatology clinics, medical spas, and master estheticians with verified credentials.</p>
-          </div>
+    <!-- Provider Header (Centered Hero Content) -->
+    <section class="section-padding-sm bg-surface-subtle border-bottom text-center">
+      <div class="container" style="max-width: 860px;">
+        <nav aria-label="breadcrumb" class="d-flex justify-content-center">
+          <ol class="breadcrumb small mb-2">
+            <li class="breadcrumb-item"><a href="index.html" class="text-muted text-decoration-none">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Providers</li>
+          </ol>
+        </nav>
+        <span class="section-eyebrow mb-2 d-inline-flex align-items-center"><i class="bi bi-patch-check text-sage me-1"></i> Medical Credentialing</span>
+        <h1 class="display-6 mb-2" style="font-family: var(--font-display);">Verified Skincare Specialists & Clinics</h1>
+        <p class="text-muted small mx-auto mb-4" style="max-width: 600px;">Browse certified dermatology clinics, medical spas, and master estheticians with rigorous license, device, and hygiene verification.</p>
 
-          <div class="col-lg-6">
-            <div class="input-group">
-              <span class="input-group-text bg-surface border-end-0"><i class="bi bi-search text-sage"></i></span>
-              <input type="text" class="form-control bg-surface border-start-0 py-2" id="providerFilterSearch" placeholder="Search by clinic name, doctor, or city..." aria-label="Search providers">
-            </div>
+        <!-- Centered Search Bar -->
+        <div class="mx-auto" style="max-width: 540px;">
+          <div class="input-group">
+            <span class="input-group-text bg-surface border-end-0"><i class="bi bi-search text-sage"></i></span>
+            <input type="text" class="form-control bg-surface border-start-0 py-2" id="providerFilterSearch" placeholder="Search by clinic name, doctor, or city..." aria-label="Search providers">
           </div>
         </div>
       </div>
@@ -136,40 +139,154 @@
         </div>
       </div>
     </section>
+
+    <!-- NEW SECTION: The 5-Step LUMÉA Clinical Verification Standard -->
+    <section class="section-padding bg-surface-subtle border-top">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <span class="section-eyebrow"><i class="bi bi-shield-check text-sage me-1"></i> Patient Safety Governance</span>
+          <h2 class="section-title">The 5-Step LUMÉA Verification Standard</h2>
+          <p class="section-subtitle mx-auto" style="max-width: 620px;">
+            Fewer than 18% of aesthetic clinics meet our strict credentialing requirements. Here is how we safeguard your treatment quality.
+          </p>
+        </div>
+
+        <div class="row g-4 mb-5">
+          <!-- Step 1 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="lumea-card h-100 p-4">
+              <div class="brand-symbol mb-3" style="width:44px; height:44px; font-size:1.15rem;">1</div>
+              <h4 class="h5 mb-2" style="font-family: var(--font-display);">Board License Audits</h4>
+              <p class="text-secondary small mb-0">Every physician, dermatologist, and aesthetician is verified directly against government medical council registers with zero license lapses allowed.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="lumea-card h-100 p-4">
+              <div class="brand-symbol mb-3" style="background:var(--brand-clay); width:44px; height:44px; font-size:1.15rem;">2</div>
+              <h4 class="h5 mb-2" style="font-family: var(--font-display);">Device Serial Matching</h4>
+              <p class="text-secondary small mb-0">We inspect serial numbers for all laser, RF, and hydro-infusion systems with original OEMs (Hydrafacial, Cynosure, InMode) to prevent counterfeit machines.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="lumea-card h-100 p-4">
+              <div class="brand-symbol mb-3" style="background:var(--brand-sand-dark); width:44px; height:44px; font-size:1.15rem;">3</div>
+              <h4 class="h5 mb-2" style="font-family: var(--font-display);">Sterile Hygiene Logs</h4>
+              <p class="text-secondary small mb-0">Surprise clinical site inspections evaluate autoclave spore testing, single-use consumable packaging, and medical disposal compliance.</p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="lumea-card h-100 p-4">
+              <div class="brand-symbol mb-3" style="width:44px; height:44px; font-size:1.15rem;">4</div>
+              <h4 class="h5 mb-2" style="font-family: var(--font-display);">Verified Patient Reviews</h4>
+              <p class="text-secondary small mb-0">Only patients who paid deposits and completed verified appointments through LUMÉA can publish clinic ratings and recovery feedback.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Provider CTA Banner -->
+        <div class="lumea-card p-4 p-md-5 text-center bg-surface border-sage" style="border: 1px solid var(--brand-sage-border);">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-8 text-lg-start">
+              <span class="badge-lumea badge-sage mb-2">For Aesthetic Practices</span>
+              <h3 class="h3 mb-2" style="font-family: var(--font-display);">Are You an Accredited Clinic or Board-Certified Specialist?</h3>
+              <p class="text-muted small mb-0">Join LUMÉA's curated aesthetic marketplace to connect with high-intent patients seeking premium clinical skincare treatments.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+              <a href="signup.html?type=provider" class="btn btn-primary btn-lg me-2">Join as Provider</a>
+              <a href="provider-setup.html" class="btn btn-outline-secondary btn-lg">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- Footer -->
+  <!-- ==========================================================================
+       FOOTER (White Background, Consistent Multi-Column Layout)
+       ========================================================================== -->
   <footer class="lumea-footer">
     <div class="container">
       <div class="row g-5">
+        <!-- Col 1: Brand Info & Social Icons -->
         <div class="col-lg-4">
-          <div class="footer-brand-name">LUMÉA</div>
-          <div class="footer-tagline">“Discover Better Skin. Book With Confidence.”</div>
+          <a href="index.html" class="navbar-brand-lumea mb-3">
+            <div class="brand-symbol">L</div>
+            <div class="brand-text">
+              <span class="brand-name">LUMÉA</span>
+              <span class="brand-tagline">Skincare Engine</span>
+            </div>
+          </a>
+          <p class="text-secondary small mt-3" style="line-height: 1.65; max-width: 340px;">
+            The sophisticated clinical marketplace for verified skincare specialists, interactive treatment quotes, and real-time appointment reservations.
+          </p>
+          <div class="footer-social-icons mt-4">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          </div>
         </div>
+
+        <!-- Col 2: Treatments & Marketplace -->
         <div class="col-6 col-lg-2">
           <div class="footer-title">Explore</div>
           <ul class="footer-nav">
-            <li><a href="treatments.html">Treatments</a></li>
-            <li><a href="providers.html">Providers</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-lg-3">
-          <div class="footer-title">For Providers</div>
-          <ul class="footer-nav">
-            <li><a href="signup.html?type=provider">Become a Provider</a></li>
-            <li><a href="manage-availability.html">Manage Availability</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-3">
-          <div class="footer-title">Company</div>
-          <ul class="footer-nav">
+            <li><a href="treatments.html">All Treatments</a></li>
+            <li><a href="providers.html">Verified Providers</a></li>
+            <li><a href="resources.html">Skincare Journal</a></li>
             <li><a href="about.html">About LUMÉA</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Contact & Support</a></li>
           </ul>
+        </div>
+
+        <!-- Col 3: For Providers -->
+        <div class="col-6 col-lg-3">
+          <div class="footer-title">For Clinics & Providers</div>
+          <ul class="footer-nav">
+            <li><a href="signup.html?type=provider">Join as a Provider</a></li>
+            <li><a href="manage-availability.html">Manage Availability</a></li>
+            <li><a href="provider-setup.html">Clinic Setup</a></li>
+            <li><a href="about.html#verification">Provider Guidelines</a></li>
+            <li><a href="contact.html">Partner Inquiries</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter & Verification -->
+        <div class="col-lg-3">
+          <div class="footer-title">Stay Connected</div>
+          <p class="text-secondary small mb-3">Subscribe to our journal for curated dermatologist advice and clinical treatment insights.</p>
+          <form id="newsletterForm" class="mb-3">
+            <div class="input-group">
+              <input type="email" class="form-control footer-newsletter-input" placeholder="Your email address" required aria-label="Email for newsletter">
+              <button class="btn btn-primary" type="submit" style="border-radius: var(--radius-pill); margin-left: -35px; z-index: 5;">
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </form>
+          <div class="small text-muted">
+            <i class="bi bi-shield-check text-sage me-1"></i> US-FDA & CE Verified Practices
+          </div>
         </div>
       </div>
+
+      <!-- Footer Bottom -->
       <div class="footer-bottom">
-        <div>&copy; 2026 LUMÉA Marketplace Inc. All rights reserved.</div>
+        <div>
+          &copy; 2026 LUMÉA Marketplace Inc. All rights reserved. Non-diagnostic cosmetic & dermatological scheduling platform.
+        </div>
+        <div class="d-flex gap-4">
+          <a href="about.html" class="text-muted text-decoration-none">Privacy Policy</a>
+          <a href="about.html" class="text-muted text-decoration-none">Terms of Service</a>
+          <a href="contact.html" class="text-muted text-decoration-none">Contact Concierge</a>
+        </div>
       </div>
     </div>
   </footer>

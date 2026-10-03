@@ -11,6 +11,9 @@
   <meta property="og:description" content="The premier marketplace for verified skincare treatments, clinical facials, and dermatology specialists.">
   <meta property="og:type" content="website">
   
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  
   <!-- CSS Dependencies -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -37,58 +40,16 @@
         </div>
       </a>
 
-      <!-- Desktop Navigation Menu -->
+      <!-- Desktop Navigation Menu (Direct Links, No Dropdowns) -->
       <ul class="navbar-nav-main">
         <li class="nav-item-lumea">
           <a href="index.html" class="nav-link-lumea active">Home</a>
         </li>
-
-        <!-- Treatments Dropdown -->
         <li class="nav-item-lumea">
-          <a href="treatments.html" class="nav-link-lumea" aria-haspopup="true">
-            Treatments <i class="bi bi-chevron-down" style="font-size: 0.75rem;"></i>
-          </a>
-          <ul class="lumea-dropdown-menu dropdown-wide" aria-label="Treatments Submenu">
-            <li><a class="dropdown-link-lumea" href="treatments.html?category=Hydrafacials"><i class="bi bi-droplet-half"></i> Hydrafacials</a></li>
-            <li><a class="dropdown-link-lumea" href="treatments.html?category=Chemical+Peels"><i class="bi bi-magic"></i> Chemical Peels</a></li>
-            <li><a class="dropdown-link-lumea" href="treatments.html?category=Microneedling"><i class="bi bi-bullseye"></i> Microneedling</a></li>
-            <li><a class="dropdown-link-lumea" href="treatments.html?category=LED+Therapy"><i class="bi bi-lamp"></i> LED Therapy</a></li>
-            <li><a class="dropdown-link-lumea" href="treatments.html?category=Acne+Treatments"><i class="bi bi-shield-plus"></i> Acne Treatments</a></li>
-            <li><a class="dropdown-link-lumea" href="treatments.html?category=Anti-Aging+Treatments"><i class="bi bi-hourglass-split"></i> Anti-Aging Treatments</a></li>
-            <li><a class="dropdown-link-lumea" href="treatments.html?category=Skin+Brightening"><i class="bi bi-brightness-high"></i> Skin Brightening</a></li>
-            <li><a class="dropdown-link-lumea" href="treatments.html?category=Body+Treatments"><i class="bi bi-person-arms-up"></i> Body Treatments</a></li>
-            <li><a class="dropdown-link-lumea" href="treatments.html"><i class="bi bi-sparkles"></i> Facials & Deep Cleanse</a></li>
-            <li class="dropdown-divider-lumea"></li>
-            <li style="grid-column: 1 / -1;">
-              <a class="dropdown-link-lumea fw-bold text-sage" href="treatments.html">
-                <i class="bi bi-grid-fill"></i> View All Treatments & Instant Quotes &rarr;
-              </a>
-            </li>
-          </ul>
-        </li>
-
-        <!-- Providers Dropdown -->
-        <li class="nav-item-lumea">
-          <a href="providers.html" class="nav-link-lumea" aria-haspopup="true">
-            Providers <i class="bi bi-chevron-down" style="font-size: 0.75rem;"></i>
-          </a>
-          <ul class="lumea-dropdown-menu" aria-label="Providers Submenu">
-            <li><a class="dropdown-link-lumea" href="providers.html"><i class="bi bi-search"></i> Find Providers</a></li>
-            <li><a class="dropdown-link-lumea" href="providers.html?type=Dermatology+Clinics"><i class="bi bi-hospital"></i> Dermatology Clinics</a></li>
-            <li><a class="dropdown-link-lumea" href="providers.html?type=Estheticians"><i class="bi bi-person-check"></i> Estheticians</a></li>
-            <li><a class="dropdown-link-lumea" href="providers.html?type=Skin+Specialists"><i class="bi bi-award"></i> Skin Specialists</a></li>
-            <li><a class="dropdown-link-lumea" href="providers.html?type=Beauty+Studios"><i class="bi bi-gem"></i> Beauty Studios</a></li>
-            <li><a class="dropdown-link-lumea" href="providers.html?type=Wellness+Clinics"><i class="bi bi-heart-pulse"></i> Wellness Clinics</a></li>
-            <li class="dropdown-divider-lumea"></li>
-            <li><a class="dropdown-link-lumea fw-semibold text-sage" href="providers.html"><i class="bi bi-star-fill text-warning"></i> Featured Providers</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item-lumea">
-          <a href="treatments.html" class="nav-link-lumea">Explore</a>
+          <a href="treatments.html" class="nav-link-lumea">Treatments</a>
         </li>
         <li class="nav-item-lumea">
-          <a href="#how-it-works" class="nav-link-lumea">How It Works</a>
+          <a href="providers.html" class="nav-link-lumea">Providers</a>
         </li>
         <li class="nav-item-lumea">
           <a href="resources.html" class="nav-link-lumea">Journal</a>
@@ -96,36 +57,14 @@
         <li class="nav-item-lumea">
           <a href="about.html" class="nav-link-lumea">About</a>
         </li>
+        <li class="nav-item-lumea">
+          <a href="contact.html" class="nav-link-lumea">Contact</a>
+        </li>
       </ul>
 
-      <!-- Navbar Actions (Search, Theme, Favorites, Auth, CTA) -->
+      <!-- Navbar Actions (Sign Up Button & Hamburger) -->
       <div class="navbar-actions">
-        <!-- Search Trigger -->
-        <button type="button" class="btn-search-trigger" aria-label="Search treatments or providers" title="Search (Ctrl + K)">
-          <i class="bi bi-search"></i>
-        </button>
-
-        <!-- Theme Switcher -->
-        <button type="button" class="btn-theme-toggle" aria-label="Toggle dark/light theme" title="Toggle theme">
-          <i class="bi bi-moon-stars-fill"></i>
-        </button>
-
-        <!-- Saved/Favorites Trigger -->
-        <a href="my-bookings.html" class="btn-favorites-nav" aria-label="Saved Items" title="Saved Collection">
-          <i class="bi bi-heart"></i>
-          <span class="fav-counter-badge" style="display: none;">0</span>
-        </a>
-
-        <!-- Auth State Container -->
-        <div id="navbarAuthActions" class="d-inline-flex align-items-center gap-2">
-          <!-- Populated by auth.js -->
-        </div>
-
-        <!-- Primary CTA -->
-        <a href="booking.html" class="btn btn-primary d-none d-lg-inline-flex">
-          <i class="bi bi-calendar2-check me-1"></i> Book a Treatment
-        </a>
-
+        <a href="signup.html" class="btn btn-primary">Sign Up</a>
         <!-- Mobile Hamburger -->
         <button type="button" class="btn-hamburger" aria-label="Open mobile menu">
           <i class="bi bi-list"></i>
@@ -146,61 +85,16 @@
     </div>
     <div class="mobile-drawer-body">
       <ul class="mobile-nav-list">
-        <li class="mobile-nav-item">
-          <a href="index.html" class="mobile-nav-link active">Home</a>
-        </li>
-        <li class="mobile-nav-item">
-          <div class="mobile-nav-link mobile-dropdown-toggle">
-            <span>Treatments</span>
-            <i class="bi bi-chevron-down"></i>
-          </div>
-          <div class="mobile-dropdown-content">
-            <a href="treatments.html?category=Hydrafacials" class="mobile-sublink">Hydrafacials</a>
-            <a href="treatments.html?category=Chemical+Peels" class="mobile-sublink">Chemical Peels</a>
-            <a href="treatments.html?category=Microneedling" class="mobile-sublink">Microneedling</a>
-            <a href="treatments.html?category=LED+Therapy" class="mobile-sublink">LED Therapy</a>
-            <a href="treatments.html?category=Acne+Treatments" class="mobile-sublink">Acne Treatments</a>
-            <a href="treatments.html?category=Anti-Aging+Treatments" class="mobile-sublink">Anti-Aging Treatments</a>
-            <a href="treatments.html" class="mobile-sublink fw-bold text-sage">All Treatments &rarr;</a>
-          </div>
-        </li>
-        <li class="mobile-nav-item">
-          <div class="mobile-nav-link mobile-dropdown-toggle">
-            <span>Providers</span>
-            <i class="bi bi-chevron-down"></i>
-          </div>
-          <div class="mobile-dropdown-content">
-            <a href="providers.html" class="mobile-sublink">Find Providers</a>
-            <a href="providers.html?type=Dermatology+Clinics" class="mobile-sublink">Dermatology Clinics</a>
-            <a href="providers.html?type=Estheticians" class="mobile-sublink">Estheticians</a>
-            <a href="providers.html?type=Skin+Specialists" class="mobile-sublink">Skin Specialists</a>
-            <a href="providers.html" class="mobile-sublink fw-bold text-sage">Featured Clinics &rarr;</a>
-          </div>
-        </li>
-        <li class="mobile-nav-item">
-          <a href="treatments.html" class="mobile-nav-link">Explore</a>
-        </li>
-        <li class="mobile-nav-item">
-          <a href="#how-it-works" class="mobile-nav-link">How It Works</a>
-        </li>
-        <li class="mobile-nav-item">
-          <a href="resources.html" class="mobile-nav-link">Journal</a>
-        </li>
-        <li class="mobile-nav-item">
-          <a href="about.html" class="mobile-nav-link">About LUMÉA</a>
-        </li>
-        <li class="mobile-nav-item">
-          <a href="my-bookings.html" class="mobile-nav-link">My Bookings</a>
-        </li>
+        <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link active">Home</a></li>
+        <li class="mobile-nav-item"><a href="treatments.html" class="mobile-nav-link">Treatments</a></li>
+        <li class="mobile-nav-item"><a href="providers.html" class="mobile-nav-link">Providers</a></li>
+        <li class="mobile-nav-item"><a href="resources.html" class="mobile-nav-link">Journal</a></li>
+        <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About</a></li>
+        <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact</a></li>
       </ul>
 
       <div class="mt-4 pt-3 border-top">
-        <a href="booking.html" class="btn btn-primary w-100 mb-2">
-          <i class="bi bi-calendar2-check me-2"></i> Book a Treatment
-        </a>
-        <a href="login.html" class="btn btn-outline-secondary w-100">
-          Client / Provider Sign In
-        </a>
+        <a href="signup.html" class="btn btn-primary w-100">Sign Up</a>
       </div>
     </div>
   </aside>
@@ -436,7 +330,7 @@
           <div class="col-md-6 col-lg-4">
             <div class="treatment-card">
               <div class="treatment-card-img-wrap">
-                <img src="https://images.unsplash.com/photo-1512290900672-1f02e6a0d4c8?auto=format&fit=crop&w=900&q=80" alt="BioRePeelCl3 TCA Glow">
+                <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=900&q=80" alt="BioRePeelCl3 TCA Glow">
                 <span class="treatment-card-badge badge-lumea badge-clay">Chemical Peel</span>
                 <button type="button" class="treatment-fav-btn" data-fav-type="treatments" data-fav-id="biorepeel-glow" data-fav-title="BioRePeelCl3® 35% TCA Glow Peel" aria-label="Save treatment">
                   <i class="bi bi-heart"></i>
@@ -894,7 +788,7 @@
           <div class="col-md-4">
             <div class="lumea-card h-100">
               <div class="hover-zoom-img" style="aspect-ratio: 16/10;">
-                <img src="https://images.unsplash.com/photo-1512290900672-1f02e6a0d4c8?auto=format&fit=crop&w=600&q=80" alt="Hydrafacial vs Microneedling">
+                <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80" alt="Hydrafacial vs Microneedling">
               </div>
               <div class="p-4">
                 <span class="badge-lumea badge-sage mb-2">Treatment Guides</span>
@@ -961,62 +855,62 @@
   </main>
 
   <!-- ==========================================================================
-       MANDATORY FOOTER
+       FOOTER (White Background, Consistent Multi-Column Layout)
        ========================================================================== -->
   <footer class="lumea-footer">
     <div class="container">
       <div class="row g-5">
-        <!-- Col 1: Brand Info -->
+        <!-- Col 1: Brand Info & Social Icons -->
         <div class="col-lg-4">
-          <div class="footer-brand-name">LUMÉA</div>
-          <div class="footer-tagline">“Discover Better Skin. Book With Confidence.”</div>
-          <p style="color: #A3ABB2; font-size: 0.9rem; line-height: 1.6; max-width: 340px;">
+          <a href="index.html" class="navbar-brand-lumea mb-3">
+            <div class="brand-symbol">L</div>
+            <div class="brand-text">
+              <span class="brand-name">LUMÉA</span>
+              <span class="brand-tagline">Skincare Engine</span>
+            </div>
+          </a>
+          <p class="text-secondary small mt-3" style="line-height: 1.65; max-width: 340px;">
             The sophisticated clinical marketplace for verified skincare specialists, interactive treatment quotes, and real-time appointment reservations.
           </p>
           <div class="footer-social-icons mt-4">
-            <a href="https://instagram.com" class="footer-social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://facebook.com" class="footer-social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="https://linkedin.com" class="footer-social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-            <a href="https://twitter.com" class="footer-social-link" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
           </div>
         </div>
 
-        <!-- Col 2: Explore -->
+        <!-- Col 2: Treatments & Marketplace -->
         <div class="col-6 col-lg-2">
           <div class="footer-title">Explore</div>
           <ul class="footer-nav">
-            <li><a href="treatments.html">Treatments</a></li>
-            <li><a href="providers.html">Providers</a></li>
-            <li><a href="treatments.html">Explore Market</a></li>
+            <li><a href="treatments.html">All Treatments</a></li>
+            <li><a href="providers.html">Verified Providers</a></li>
             <li><a href="resources.html">Skincare Journal</a></li>
-            <li><a href="my-bookings.html">My Bookings</a></li>
+            <li><a href="about.html">About LUMÉA</a></li>
+            <li><a href="contact.html">Contact & Support</a></li>
           </ul>
         </div>
 
         <!-- Col 3: For Providers -->
         <div class="col-6 col-lg-3">
-          <div class="footer-title">For Providers</div>
+          <div class="footer-title">For Clinics & Providers</div>
           <ul class="footer-nav">
-            <li><a href="signup.html?type=provider">Become a Provider</a></li>
+            <li><a href="signup.html?type=provider">Join as a Provider</a></li>
             <li><a href="manage-availability.html">Manage Availability</a></li>
             <li><a href="provider-setup.html">Clinic Setup</a></li>
             <li><a href="about.html#verification">Provider Guidelines</a></li>
-            <li><a href="contact.html?subject=partner">Partner With Us</a></li>
+            <li><a href="contact.html">Partner Inquiries</a></li>
           </ul>
         </div>
 
-        <!-- Col 4: Company & Newsletter -->
+        <!-- Col 4: Newsletter & Verification -->
         <div class="col-lg-3">
-          <div class="footer-title">Company</div>
-          <ul class="footer-nav mb-4">
-            <li><a href="about.html">About LUMÉA</a></li>
-            <li><a href="contact.html">Contact & Support</a></li>
-            <li><a href="contact.html#faqs">FAQs</a></li>
-            <li><a href="coming-soon.html">Careers</a></li>
-          </ul>
-
-          <div class="footer-title" style="font-size: 0.78rem;">Journal Newsletter</div>
-          <form id="newsletterForm" class="mt-2">
+          <div class="footer-title">Stay Connected</div>
+          <p class="text-secondary small mb-3">Subscribe to our journal for curated dermatologist advice and clinical treatment insights.</p>
+          <form id="newsletterForm" class="mb-3">
             <div class="input-group">
               <input type="email" class="form-control footer-newsletter-input" placeholder="Your email address" required aria-label="Email for newsletter">
               <button class="btn btn-primary" type="submit" style="border-radius: var(--radius-pill); margin-left: -35px; z-index: 5;">
@@ -1024,6 +918,9 @@
               </button>
             </div>
           </form>
+          <div class="small text-muted">
+            <i class="bi bi-shield-check text-sage me-1"></i> US-FDA & CE Verified Practices
+          </div>
         </div>
       </div>
 
@@ -1035,7 +932,7 @@
         <div class="d-flex gap-4">
           <a href="about.html" class="text-muted text-decoration-none">Privacy Policy</a>
           <a href="about.html" class="text-muted text-decoration-none">Terms of Service</a>
-          <a href="contact.html" class="text-muted text-decoration-none">Security</a>
+          <a href="contact.html" class="text-muted text-decoration-none">Contact Concierge</a>
         </div>
       </div>
     </div>

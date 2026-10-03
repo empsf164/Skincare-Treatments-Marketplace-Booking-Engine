@@ -54,7 +54,7 @@
       reviewsCount: 218,
       providerCount: 14,
       earliestSlot: 'Tomorrow, 11:00 AM',
-      image: 'https://images.unsplash.com/photo-1512290900672-1f02e6a0d4c8?auto=format&fit=crop&w=900&q=80',
+      image: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=900&q=80',
       shortDesc: 'An innovative biphasic medical peel delivering 35% TCA bio-stimulation without painful peeling or visible social downtime.',
       fullDesc: 'BioRePeelCl3® is an internationally acclaimed Italian medical peeling protocol. Its patented two-phase formula bypasses the outer epidermis to stimulate deep collagen synthesis, regulate sebum production, dissolve stubborn hyperpigmentation, and tighten skin texture with minimal surface flaking.',
       includes: [
@@ -294,6 +294,42 @@
       aftercare: 'Wear loose breathable cotton clothing. Avoid intense workouts or sweating for 24 hours.',
       frequency: 'Every 4 weeks until active breakouts subside, then maintenance.',
       whoFor: 'Athletes, gym-goers, or anyone dealing with bacne, keratosis pilaris, or clogged shoulder pores.'
+    },
+    {
+      id: 'clear-brilliant-laser',
+      title: 'Clear + Brilliant® Perméa Fractional Laser',
+      category: 'Anti-Aging Treatments',
+      concern: ['Brightening', 'Texture', 'Anti-Aging', 'Pores'],
+      duration: 50,
+      startingPrice: 6999,
+      depositPercent: 20,
+      rating: 4.97,
+      reviewsCount: 285,
+      providerCount: 16,
+      earliestSlot: 'Today, 4:00 PM',
+      image: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=900&q=80',
+      shortDesc: 'Gentle non-ablative fractional diode laser that creates millions of microscopic thermal zones to renew skin texture and boost permeability.',
+      fullDesc: 'Clear + Brilliant® is often called "baby Fraxel" – a gentle yet clinically transformative laser resurfacing technology. The 1927nm Perméa handpiece creates precise micro-thermal injury zones in the upper dermal layers, stimulating accelerated cellular turnover, shrinking pore size, reducing early photo-aging, and boosting antioxidant absorption by 17x.',
+      includes: [
+        'Topical numbing gel application (20 mins)',
+        'Optical tracking full-face laser pass',
+        'Post-laser antioxidant physiological serum infusion',
+        'Soothing biocellulose cryo calming sheet mask',
+        'Physical titanium dioxide SPF 50+ finish'
+      ],
+      durationOptions: [
+        { label: '35 min Full Face Standard', duration: 35, price: 6999, default: true },
+        { label: '50 min Face & Neck Rejuvenation', duration: 50, price: 8999 },
+        { label: '65 min Face, Neck & Hands Platinum', duration: 65, price: 10999 }
+      ],
+      availableAddons: [
+        { id: 'addon-exosome-boost', name: 'Recombinant Exosome Topical Infusion', price: 1999, duration: 15 },
+        { id: 'addon-led-calm', name: 'Post-Laser Red LED Phototherapy', price: 999, duration: 15 }
+      ],
+      prep: 'Avoid retinoids, AHA/BHA chemical exfoliants, and direct sun exposure 5 days prior to treatment.',
+      aftercare: 'Mild sunburn sensation and sandpaper texture for 2–4 days. Keep skin richly hydrated with lipid creams and physical SPF 50+.',
+      frequency: 'Series of 3 to 4 sessions spaced 3 to 4 weeks apart, followed by seasonal maintenance.',
+      whoFor: 'Clients seeking refined pore texture, tone evening, and prevention of early lines with minimal downtime.'
     }
   ];
 

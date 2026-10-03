@@ -117,8 +117,8 @@
       reviewsCount: 264,
       location: 'Jubilee Hills, Hyderabad',
       fullAddress: 'Rd Number 36, Jubilee Hills, Hyderabad, 500033',
-      heroImage: 'https://images.unsplash.com/photo-1512290900672-1f02e6a0d4c8?auto=format&fit=crop&w=900&q=80',
-      avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=400&q=80',
+      heroImage: 'https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=900&q=80',
+      avatar: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=400&q=80',
       specialistName: 'Dr. Vivek Reddy, Clinical Dermatologist',
       experienceYears: 12,
       startingPrice: 4299,
@@ -127,7 +127,8 @@
       specialties: ['Acne Clear Genesis', 'Tri-Wave LED', 'Carbon Laser Peel', 'Hydrafacials'],
       bio: 'A state-of-the-art medi-aesthetic facility dedicated to clarifying congested skin, hyperpigmentation erasure, and personalized clinical maintenance.',
       clinicPhotos: [
-        'https://images.unsplash.com/photo-1512290900672-1f02e6a0d4c8?auto=format&fit=crop&w=800&q=80'
+        'https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=800&q=80',
+        'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80'
       ],
       availableSlotsToday: ['02:00 PM', '04:00 PM', '06:00 PM'],
       availableSlotsTomorrow: ['10:00 AM', '12:00 PM', '02:00 PM', '04:00 PM'],

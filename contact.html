@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact & Support — LUMÉA</title>
-  <meta name="description" content="Reach our client support concierge, inquire about clinic partnerships, or find answers to frequent booking questions.">
+  <meta name="description" content="Reach our client support concierge, inquire about clinic partnerships, find clinical suite locations and connect on social channels.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -14,6 +18,7 @@
 
   <script src="assets/js/theme.js"></script>
 </head>
+
 <body>
 
   <!-- Mandatory Navbar -->
@@ -33,28 +38,90 @@
         <li class="nav-item-lumea"><a href="providers.html" class="nav-link-lumea">Providers</a></li>
         <li class="nav-item-lumea"><a href="resources.html" class="nav-link-lumea">Journal</a></li>
         <li class="nav-item-lumea"><a href="about.html" class="nav-link-lumea">About</a></li>
+        <li class="nav-item-lumea"><a href="contact.html" class="nav-link-lumea active">Contact</a></li>
       </ul>
 
       <div class="navbar-actions">
-        <button type="button" class="btn-search-trigger" aria-label="Search"><i class="bi bi-search"></i></button>
-        <button type="button" class="btn-theme-toggle" aria-label="Theme toggle"><i class="bi bi-moon-stars-fill"></i></button>
-        <div id="navbarAuthActions" class="d-inline-flex align-items-center gap-2"></div>
-        <a href="booking.html" class="btn btn-primary d-none d-lg-inline-flex">Book a Treatment</a>
+        <a href="signup.html" class="btn btn-primary">Sign Up</a>
+        <button type="button" class="btn-hamburger" aria-label="Toggle navigation"><i class="bi bi-list"></i></button>
       </div>
     </div>
   </header>
 
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="d-flex align-items-center gap-2">
+        <div class="brand-symbol" style="width:32px; height:32px; font-size:1.1rem;">L</div>
+        <span class="brand-name" style="font-size:1.35rem;">LUMÉA</span>
+      </div>
+      <button type="button" class="btn-close btn-close-drawer" aria-label="Close"></button>
+    </div>
+    <div class="mobile-drawer-body">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li class="mobile-nav-item"><a href="treatments.html" class="mobile-nav-link">Treatments</a></li>
+        <li class="mobile-nav-item"><a href="providers.html" class="mobile-nav-link">Providers</a></li>
+        <li class="mobile-nav-item"><a href="resources.html" class="mobile-nav-link">Journal</a></li>
+        <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About</a></li>
+        <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link active">Contact</a></li>
+      </ul>
+      <div class="mt-4 pt-3 border-top">
+        <a href="signup.html" class="btn btn-primary w-100">Sign Up</a>
+      </div>
+    </div>
+  </aside>
+
   <main style="padding-top: calc(var(--navbar-height) + 20px);">
+    <!-- Hero Banner -->
     <section class="section-padding-sm bg-surface-subtle border-bottom">
       <div class="container text-center py-4">
-        <span class="section-eyebrow">Client & Partner Care</span>
+        <span class="section-eyebrow">Client & Partner Concierge</span>
         <h1 class="display-6 mb-2" style="font-family: var(--font-display);">We're Here to Assist Your Skincare Journey</h1>
-        <p class="lead text-muted mx-auto" style="max-width: 600px;">
-          Have questions regarding an upcoming appointment, deposit terms, or clinic onboarding? Reach out below.
+        <p class="lead text-muted mx-auto" style="max-width: 620px;">
+          Have questions regarding an upcoming appointment, escrow deposits, or clinic onboarding? Connect with our dedicated medical concierge.
         </p>
       </div>
     </section>
 
+    <!-- Quick Direct Contact Channels -->
+    <section class="py-4 border-bottom bg-surface">
+      <div class="container">
+        <div class="row g-3">
+          <div class="col-6 col-md-3">
+            <div class="p-3 border rounded-3 text-center h-100 bg-surface-subtle">
+              <i class="bi bi-telephone-outbound text-sage fs-4 mb-2 d-block"></i>
+              <div class="fw-semibold small">Direct Concierge</div>
+              <a href="tel:+18005863275" class="text-decoration-none small text-muted text-hover-sage">+1 (800) 586-3275</a>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="p-3 border rounded-3 text-center h-100 bg-surface-subtle">
+              <i class="bi bi-envelope-paper text-clay fs-4 mb-2 d-block"></i>
+              <div class="fw-semibold small">Client Support</div>
+              <a href="mailto:concierge@lumeaskin.com" class="text-decoration-none small text-muted text-hover-sage">concierge@lumea.com</a>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="p-3 border rounded-3 text-center h-100 bg-surface-subtle">
+              <i class="bi bi-hospital text-sand fs-4 mb-2 d-block"></i>
+              <div class="fw-semibold small">Clinic Partnerships</div>
+              <a href="mailto:partners@lumeaskin.com" class="text-decoration-none small text-muted text-hover-sage">partners@lumea.com</a>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="p-3 border rounded-3 text-center h-100 bg-surface-subtle">
+              <i class="bi bi-clock-history text-sage fs-4 mb-2 d-block"></i>
+              <div class="fw-semibold small">Concierge Hours</div>
+              <span class="small text-muted">Mon–Sat: 8AM–8PM EST</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form & FAQs -->
     <section class="section-padding">
       <div class="container">
         <div class="row g-5">
@@ -64,17 +131,17 @@
               <h3 class="mb-3" style="font-family: var(--font-display);">Send a Message</h3>
               <form id="contactInquiryForm">
                 <div class="mb-3">
-                  <label class="form-label" for="contactName">Your Name *</label>
+                  <label class="form-label fw-semibold small" for="contactName">Your Name *</label>
                   <input type="text" class="form-control" id="contactName" placeholder="Ananya Sharma" required>
                 </div>
 
                 <div class="mb-3">
-                  <label class="form-label" for="contactEmail">Email Address *</label>
+                  <label class="form-label fw-semibold small" for="contactEmail">Email Address *</label>
                   <input type="email" class="form-control" id="contactEmail" placeholder="name@domain.com" required>
                 </div>
 
                 <div class="mb-3">
-                  <label class="form-label" for="contactCategory">Inquiry Category</label>
+                  <label class="form-label fw-semibold small" for="contactCategory">Inquiry Category</label>
                   <select class="form-select" id="contactCategory">
                     <option value="booking-support">Booking Support & Rescheduling</option>
                     <option value="deposit-billing">Deposit & Payment Verification</option>
@@ -84,7 +151,7 @@
                 </div>
 
                 <div class="mb-4">
-                  <label class="form-label" for="contactMessage">Message *</label>
+                  <label class="form-label fw-semibold small" for="contactMessage">Message *</label>
                   <textarea class="form-control" id="contactMessage" rows="4" placeholder="How can our clinical support concierge assist you?" required></textarea>
                 </div>
 
@@ -155,14 +222,306 @@
         </div>
       </div>
     </section>
+
+    <!-- Social Media & Community Channels Section -->
+    <section class="section-padding bg-surface-subtle border-top border-bottom">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-eyebrow">Stay Connected</span>
+          <h2 class="section-title">Follow LUMÉA on Social Channels</h2>
+          <p class="section-subtitle">
+            Join over 250,000+ skincare enthusiasts, board-certified dermatologists, and clinical estheticians across our official communities.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Instagram -->
+          <div class="col-md-6 col-lg-4">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="contact-social-card h-100">
+              <div class="contact-social-icon social-icon-instagram">
+                <i class="bi bi-instagram"></i>
+              </div>
+              <div>
+                <div class="d-flex align-items-center gap-2">
+                  <h6 class="mb-0 fw-bold">Instagram</h6>
+                  <span class="badge bg-danger-subtle text-danger small" style="font-size:0.7rem;">120K</span>
+                </div>
+                <div class="text-muted small">@lumea.skincare</div>
+                <div class="text-secondary small mt-1">Daily clinical tips, skincare protocols & before/after results.</div>
+              </div>
+            </a>
+          </div>
+
+          <!-- YouTube -->
+          <div class="col-md-6 col-lg-4">
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="contact-social-card h-100">
+              <div class="contact-social-icon social-icon-youtube">
+                <i class="bi bi-youtube"></i>
+              </div>
+              <div>
+                <div class="d-flex align-items-center gap-2">
+                  <h6 class="mb-0 fw-bold">YouTube</h6>
+                  <span class="badge bg-danger-subtle text-danger small" style="font-size:0.7rem;">45K</span>
+                </div>
+                <div class="text-muted small">@LumeaAesthetics</div>
+                <div class="text-secondary small mt-1">In-depth treatment walkthroughs, laser guides & MD interviews.</div>
+              </div>
+            </a>
+          </div>
+
+          <!-- WhatsApp Concierge -->
+          <div class="col-md-6 col-lg-4">
+            <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" class="contact-social-card h-100">
+              <div class="contact-social-icon social-icon-whatsapp">
+                <i class="bi bi-whatsapp"></i>
+              </div>
+              <div>
+                <div class="d-flex align-items-center gap-2">
+                  <h6 class="mb-0 fw-bold">WhatsApp Concierge</h6>
+                  <span class="badge bg-success-subtle text-success small" style="font-size:0.7rem;">Instant</span>
+                </div>
+                <div class="text-muted small">+1 (555) 019-2834</div>
+                <div class="text-secondary small mt-1">Instant suite appointment assistance & direct slot rescheduling.</div>
+              </div>
+            </a>
+          </div>
+
+          <!-- LinkedIn -->
+          <div class="col-md-6 col-lg-4">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-social-card h-100">
+              <div class="contact-social-icon social-icon-linkedin">
+                <i class="bi bi-linkedin"></i>
+              </div>
+              <div>
+                <div class="d-flex align-items-center gap-2">
+                  <h6 class="mb-0 fw-bold">LinkedIn</h6>
+                  <span class="badge bg-primary-subtle text-primary small" style="font-size:0.7rem;">Verified</span>
+                </div>
+                <div class="text-muted small">LUMÉA Medical Marketplace</div>
+                <div class="text-secondary small mt-1">Clinical research, provider network news & practice acquisitions.</div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Facebook -->
+          <div class="col-md-6 col-lg-4">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="contact-social-card h-100">
+              <div class="contact-social-icon social-icon-facebook">
+                <i class="bi bi-facebook"></i>
+              </div>
+              <div>
+                <div class="d-flex align-items-center gap-2">
+                  <h6 class="mb-0 fw-bold">Facebook</h6>
+                  <span class="badge bg-primary-subtle text-primary small" style="font-size:0.7rem;">60K</span>
+                </div>
+                <div class="text-muted small">@LumeaMarketplace</div>
+                <div class="text-secondary small mt-1">Community skincare reviews, live sessions & patient forums.</div>
+              </div>
+            </a>
+          </div>
+
+          <!-- X / Twitter -->
+          <div class="col-md-6 col-lg-4">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="contact-social-card h-100">
+              <div class="contact-social-icon social-icon-twitter">
+                <i class="bi bi-twitter-x"></i>
+              </div>
+              <div>
+                <div class="d-flex align-items-center gap-2">
+                  <h6 class="mb-0 fw-bold">X (Twitter)</h6>
+                  <span class="badge bg-dark-subtle text-dark small" style="font-size:0.7rem;">Official</span>
+                </div>
+                <div class="text-muted small">@LumeaSkincare</div>
+                <div class="text-secondary small mt-1">Platform updates, feature announcements & aesthetic trends.</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Flagship Clinical Locations & Interactive Map Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-eyebrow">Our Clinical Suites</span>
+          <h2 class="section-title">Visit Our Flagship Aesthetic Centers & Partner Hubs</h2>
+          <p class="section-subtitle">
+            Explore our state-of-the-art clinical suites equipped with US-FDA and CE-certified medical lasers and hydrafacial suites.
+          </p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <!-- Left: Location Selector Cards -->
+          <div class="col-lg-5 d-flex flex-column gap-3">
+            <div class="map-card-tab active" data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215573426744!2d-73.98083812347108!3d40.75294323483984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259005f159a47%3A0xf63624e5ef96cb88!2s580%205th%20Ave%2C%20New%20York%2C%20NY%2010036%2C%20USA!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" data-title="New York Flagship Suite" data-addr="580 5th Avenue, Suite 1400, Manhattan, New York, NY 10036" data-phone="+1 (212) 555-0194" data-timing="Mon – Sat: 8:30 AM – 7:30 PM EST">
+              <div class="d-flex justify-content-between align-items-start mb-1">
+                <h6 class="fw-bold mb-0"><i class="bi bi-geo-alt-fill text-sage me-1"></i> New York Flagship Suite</h6>
+                <span class="badge-lumea badge-sage">Flagship</span>
+              </div>
+              <p class="text-muted small mb-2">580 5th Avenue, Suite 1400, Manhattan, New York, NY 10036</p>
+              <div class="d-flex align-items-center gap-3 text-secondary" style="font-size:0.75rem;">
+                <span><i class="bi bi-telephone me-1 text-sage"></i> +1 (212) 555-0194</span>
+                <span><i class="bi bi-clock me-1 text-sage"></i> 8:30 AM – 7:30 PM</span>
+              </div>
+            </div>
+
+            <div class="map-card-tab" data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.452697843231!2d-118.40698122378873!3d34.06783851742491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bc0517724a87%3A0xb35a0928a6fcf777!2s9600%20Wilshire%20Blvd%2C%20Beverly%20Hills%2C%20CA%2090212%2C%20USA!5e0!3m2!1sen!2sin!4v1710000000001!5m2!1sen!2sin" data-title="Beverly Hills Aesthetic Pavilion" data-addr="9600 Wilshire Blvd, Beverly Hills, CA 90212" data-phone="+1 (310) 555-0182" data-timing="Mon – Sat: 9:00 AM – 8:00 PM PST">
+              <div class="d-flex justify-content-between align-items-start mb-1">
+                <h6 class="fw-bold mb-0"><i class="bi bi-geo-alt-fill text-clay me-1"></i> Beverly Hills Pavilion</h6>
+                <span class="badge-lumea badge-sand">Laser Center</span>
+              </div>
+              <p class="text-muted small mb-2">9600 Wilshire Blvd, Beverly Hills, CA 90212</p>
+              <div class="d-flex align-items-center gap-3 text-secondary" style="font-size:0.75rem;">
+                <span><i class="bi bi-telephone me-1 text-clay"></i> +1 (310) 555-0182</span>
+                <span><i class="bi bi-clock me-1 text-clay"></i> 9:00 AM – 8:00 PM</span>
+              </div>
+            </div>
+
+            <div class="map-card-tab" data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.365319523267!2d72.83173747514197!3d19.063032582138247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c916298b4c05%3A0xd6b7a5a587d46813!2sLinking%20Rd%2C%20Bandra%20West%2C%20Mumbai%2C%20Maharashtra%20400050!5e0!3m2!1sen!2sin!4v1710000000002!5m2!1sen!2sin" data-title="Mumbai Flagship Dermatology Hub" data-addr="Linking Road, Bandra West, Mumbai, Maharashtra 400050" data-phone="+91 22 5550 1900" data-timing="Mon – Sun: 10:00 AM – 8:00 PM IST">
+              <div class="d-flex justify-content-between align-items-start mb-1">
+                <h6 class="fw-bold mb-0"><i class="bi bi-geo-alt-fill text-sand me-1"></i> Mumbai Clinical Studio</h6>
+                <span class="badge-lumea badge-sage">Partner Hub</span>
+              </div>
+              <p class="text-muted small mb-2">Linking Road, Bandra West, Mumbai, Maharashtra 400050</p>
+              <div class="d-flex align-items-center gap-3 text-secondary" style="font-size:0.75rem;">
+                <span><i class="bi bi-telephone me-1 text-sand"></i> +91 22 5550 1900</span>
+                <span><i class="bi bi-clock me-1 text-sand"></i> 10:00 AM – 8:00 PM</span>
+              </div>
+            </div>
+
+            <div class="map-card-tab" data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.684128509748!2d-0.1481541233857599!3d51.51902880990863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ad47a829fd1%3A0xc3f1f10be3a6a92!2s10%20Harley%20St%2C%20London%20W1G%209PF%2C%20UK!5e0!3m2!1sen!2sin!4v1710000000003!5m2!1sen!2sin" data-title="London Harley Street Suite" data-addr="10 Harley St, Marylebone, London W1G 9PF, United Kingdom" data-phone="+44 20 7946 0912" data-timing="Mon – Fri: 9:00 AM – 6:30 PM GMT">
+              <div class="d-flex justify-content-between align-items-start mb-1">
+                <h6 class="fw-bold mb-0"><i class="bi bi-geo-alt-fill text-sage me-1"></i> London Harley St Suite</h6>
+                <span class="badge-lumea badge-sand">European Hub</span>
+              </div>
+              <p class="text-muted small mb-2">10 Harley St, Marylebone, London W1G 9PF, UK</p>
+              <div class="d-flex align-items-center gap-3 text-secondary" style="font-size:0.75rem;">
+                <span><i class="bi bi-telephone me-1 text-sage"></i> +44 20 7946 0912</span>
+                <span><i class="bi bi-clock me-1 text-sage"></i> 9:00 AM – 6:30 PM</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Map Frame -->
+          <div class="col-lg-7">
+            <div class="contact-map-wrapper h-100 d-flex flex-column">
+              <!-- Location Info Banner on Map -->
+              <div class="p-3 bg-surface border-bottom d-flex justify-content-between align-items-center flex-wrap gap-2">
+                <div>
+                  <h6 class="mb-0 fw-bold" id="mapActiveTitle">New York Flagship Suite</h6>
+                  <span class="text-muted small" id="mapActiveAddress">580 5th Avenue, Suite 1400, Manhattan, New York, NY 10036</span>
+                </div>
+                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary d-inline-flex align-items-center gap-1" id="mapDirectionsBtn">
+                  <i class="bi bi-compass"></i> Get Directions
+                </a>
+              </div>
+
+              <!-- Map Embed Frame -->
+              <div class="flex-grow-1 position-relative" style="min-height: 380px;">
+                <iframe id="contactGoogleMap"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215573426744!2d-73.98083812347108!3d40.75294323483984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259005f159a47%3A0xf63624e5ef96cb88!2s580%205th%20Ave%2C%20New%20York%2C%20NY%2010036%2C%20USA!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+                  class="contact-map-frame h-100"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="LUMÉA Clinical Suite Map">
+                </iframe>
+              </div>
+
+              <!-- Map Footer Bar -->
+              <div class="p-2 px-3 bg-surface-subtle border-top d-flex justify-content-between align-items-center small text-muted">
+                <span><i class="bi bi-shield-check text-sage me-1"></i> Verified Clinical Facility</span>
+                <span>Valet Parking & Subway Accessible</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- Footer -->
+  <!-- ==========================================================================
+       FOOTER (White Background, Consistent Multi-Column Layout)
+       ========================================================================== -->
   <footer class="lumea-footer">
-    <div class="container text-center">
-      <div class="footer-brand-name">LUMÉA</div>
-      <div class="footer-tagline">“Discover Better Skin. Book With Confidence.”</div>
-      <div class="mt-4 small text-muted">&copy; 2026 LUMÉA Marketplace Inc. All rights reserved.</div>
+    <div class="container">
+      <div class="row g-5">
+        <!-- Col 1: Brand Info & Social Icons -->
+        <div class="col-lg-4">
+          <a href="index.html" class="navbar-brand-lumea mb-3">
+            <div class="brand-symbol">L</div>
+            <div class="brand-text">
+              <span class="brand-name">LUMÉA</span>
+              <span class="brand-tagline">Skincare Engine</span>
+            </div>
+          </a>
+          <p class="text-secondary small mt-3" style="line-height: 1.65; max-width: 340px;">
+            The sophisticated clinical marketplace for verified skincare specialists, interactive treatment quotes, and real-time appointment reservations.
+          </p>
+          <div class="footer-social-icons mt-4">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Treatments & Marketplace -->
+        <div class="col-6 col-lg-2">
+          <div class="footer-title">Explore</div>
+          <ul class="footer-nav">
+            <li><a href="treatments.html">All Treatments</a></li>
+            <li><a href="providers.html">Verified Providers</a></li>
+            <li><a href="resources.html">Skincare Journal</a></li>
+            <li><a href="about.html">About LUMÉA</a></li>
+            <li><a href="contact.html">Contact & Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: For Providers -->
+        <div class="col-6 col-lg-3">
+          <div class="footer-title">For Clinics & Providers</div>
+          <ul class="footer-nav">
+            <li><a href="signup.html?type=provider">Join as a Provider</a></li>
+            <li><a href="manage-availability.html">Manage Availability</a></li>
+            <li><a href="provider-setup.html">Clinic Setup</a></li>
+            <li><a href="about.html#verification">Provider Guidelines</a></li>
+            <li><a href="contact.html">Partner Inquiries</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter & Verification -->
+        <div class="col-lg-3">
+          <div class="footer-title">Stay Connected</div>
+          <p class="text-secondary small mb-3">Subscribe to our journal for curated dermatologist advice and clinical treatment insights.</p>
+          <form id="newsletterForm" class="mb-3">
+            <div class="input-group">
+              <input type="email" class="form-control footer-newsletter-input" placeholder="Your email address" required aria-label="Email for newsletter">
+              <button class="btn btn-primary" type="submit" style="border-radius: var(--radius-pill); margin-left: -35px; z-index: 5;">
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </form>
+          <div class="small text-muted">
+            <i class="bi bi-shield-check text-sage me-1"></i> US-FDA & CE Verified Practices
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 LUMÉA Marketplace Inc. All rights reserved. Non-diagnostic cosmetic & dermatological scheduling platform.
+        </div>
+        <div class="d-flex gap-4">
+          <a href="about.html" class="text-muted text-decoration-none">Privacy Policy</a>
+          <a href="about.html" class="text-muted text-decoration-none">Terms of Service</a>
+          <a href="contact.html" class="text-muted text-decoration-none">Contact Concierge</a>
+        </div>
+      </div>
     </div>
   </footer>
 
@@ -175,15 +534,44 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // Contact Form Handler
       const form = document.getElementById('contactInquiryForm');
       if (form) {
         form.addEventListener('submit', (e) => {
           e.preventDefault();
-          window.LumeaNotifications?.success('Thank you! Your message has been received by our concierge team.', 5000);
+          window.LumeaNotifications?.success('Thank you! Your inquiry has been received. Our clinical concierge will respond within 2 hours.', 5000);
           form.reset();
         });
       }
+
+      // Map Location Selector Tabs
+      const mapTabs = document.querySelectorAll('.map-card-tab');
+      const mapFrame = document.getElementById('contactGoogleMap');
+      const mapTitle = document.getElementById('mapActiveTitle');
+      const mapAddr = document.getElementById('mapActiveAddress');
+      const mapDirections = document.getElementById('mapDirectionsBtn');
+
+      mapTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          mapTabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+
+          const mapSrc = tab.dataset.mapSrc;
+          const title = tab.dataset.title;
+          const addr = tab.dataset.addr;
+
+          if (mapFrame && mapSrc) {
+            mapFrame.src = mapSrc;
+          }
+          if (mapTitle) mapTitle.textContent = title;
+          if (mapAddr) mapAddr.textContent = addr;
+          if (mapDirections) {
+            mapDirections.href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(addr)}`;
+          }
+        });
+      });
     });
   </script>
 </body>
+
 </html>

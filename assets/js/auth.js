@@ -51,43 +51,10 @@
   }
 
   function updateAuthNavbarUI() {
-    const user = getCurrentUser();
+    // Profile in navbar removed per user requirements. Static Sign Up CTA is used.
     const authActionsContainer = document.getElementById('navbarAuthActions');
-    if (!authActionsContainer) return;
-
-    if (user && user.isLoggedIn) {
-      authActionsContainer.innerHTML = `
-        <div class="dropdown">
-          <button class="btn btn-sm btn-secondary d-flex align-items-center gap-2 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="padding: 0.4rem 0.85rem;">
-            <img src="${user.avatar}" alt="${user.name}" style="width:24px; height:24px; border-radius:50%; object-fit:cover;">
-            <span class="d-none d-md-inline fw-semibold">${user.name.split(' ')[0]}</span>
-          </button>
-          <ul class="dropdown-menu dropdown-menu-end shadow-sm" style="background-color:var(--bg-surface); border-color:var(--border-subtle); border-radius:var(--radius-md);">
-            <li><span class="dropdown-header text-muted small">${user.email} (${user.role.toUpperCase()})</span></li>
-            ${user.role === 'provider' ? `
-              <li><a class="dropdown-item small" href="manage-availability.html"><i class="bi bi-calendar-range me-2 text-sage"></i>Manage Availability</a></li>
-              <li><a class="dropdown-item small" href="provider-setup.html"><i class="bi bi-sliders me-2 text-sage"></i>Clinic Setup</a></li>
-            ` : `
-              <li><a class="dropdown-item small" href="my-bookings.html"><i class="bi bi-calendar-check me-2 text-sage"></i>My Bookings</a></li>
-            `}
-            <li><hr class="dropdown-divider" style="border-color:var(--border-subtle);"></li>
-            <li><button class="dropdown-item small text-danger" id="btnLogoutNav"><i class="bi bi-box-arrow-right me-2"></i>Sign Out</button></li>
-          </ul>
-        </div>
-      `;
-
-      const logoutBtn = authActionsContainer.querySelector('#btnLogoutNav');
-      if (logoutBtn) {
-        logoutBtn.addEventListener('click', (e) => {
-          e.preventDefault();
-          logout();
-        });
-      }
-    } else {
-      authActionsContainer.innerHTML = `
-        <a href="login.html" class="btn btn-sm btn-outline-secondary d-none d-sm-inline-flex">Sign In</a>
-        <a href="signup.html" class="btn btn-sm btn-secondary d-none d-sm-inline-flex">Sign Up</a>
-      `;
+    if (authActionsContainer) {
+      authActionsContainer.innerHTML = '';
     }
   }
 
@@ -164,6 +131,27 @@
         }, 1500);
       });
     }
+
+    // Social Login Buttons (Google & Apple)
+    document.querySelectorAll('#btnGoogleLogin, #btnGoogleSignup, #btnGoogleReset').forEach(btn => {
+      btn.addEventListener('click', () => {
+        window.LumeaNotifications?.info('Connecting to Google Single Sign-On...');
+        setTimeout(() => {
+          login('ananya.sharma@gmail.com', 'demo123', 'client');
+          window.location.href = 'my-bookings.html';
+        }, 900);
+      });
+    });
+
+    document.querySelectorAll('#btnAppleLogin, #btnAppleSignup, #btnAppleReset').forEach(btn => {
+      btn.addEventListener('click', () => {
+        window.LumeaNotifications?.info('Connecting with Apple ID...');
+        setTimeout(() => {
+          login('ananya.apple@icloud.com', 'demo123', 'client');
+          window.location.href = 'my-bookings.html';
+        }, 900);
+      });
+    });
   }
 
   document.addEventListener('DOMContentLoaded', () => {
