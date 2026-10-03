@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Provider Discovery — LUMÉA Skincare</title>
+  <meta name="description" content="Explore verified dermatology clinics, master estheticians, and skin specialists with real-time appointment availability.">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <script src="assets/js/theme.js"></script>
+</head>
+<body>
+
+  <!-- Mandatory Navbar -->
+  <header class="lumea-navbar scrolled">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-brand-lumea">
+        <div class="brand-symbol">L</div>
+        <div class="brand-text">
+          <span class="brand-name">LUMÉA</span>
+          <span class="brand-tagline">Skincare Engine</span>
+        </div>
+      </a>
+
+      <ul class="navbar-nav-main">
+        <li class="nav-item-lumea"><a href="index.html" class="nav-link-lumea">Home</a></li>
+        <li class="nav-item-lumea"><a href="treatments.html" class="nav-link-lumea">Treatments</a></li>
+        <li class="nav-item-lumea"><a href="providers.html" class="nav-link-lumea active">Providers</a></li>
+        <li class="nav-item-lumea"><a href="resources.html" class="nav-link-lumea">Journal</a></li>
+        <li class="nav-item-lumea"><a href="about.html" class="nav-link-lumea">About</a></li>
+      </ul>
+
+      <div class="navbar-actions">
+        <button type="button" class="btn-search-trigger" aria-label="Search"><i class="bi bi-search"></i></button>
+        <button type="button" class="btn-theme-toggle" aria-label="Theme toggle"><i class="bi bi-moon-stars-fill"></i></button>
+        <a href="my-bookings.html" class="btn-favorites-nav" aria-label="Saved"><i class="bi bi-heart"></i><span class="fav-counter-badge" style="display:none;">0</span></a>
+        <div id="navbarAuthActions" class="d-inline-flex align-items-center gap-2"></div>
+        <a href="booking.html" class="btn btn-primary d-none d-lg-inline-flex">Book a Treatment</a>
+        <button type="button" class="btn-hamburger" aria-label="Mobile menu"><i class="bi bi-list"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop"></div>
+  <aside class="mobile-nav-drawer">
+    <div class="mobile-drawer-header">
+      <div class="d-flex align-items-center gap-2">
+        <div class="brand-symbol" style="width:32px; height:32px;">L</div>
+        <span class="brand-name" style="font-size:1.35rem;">LUMÉA</span>
+      </div>
+      <button type="button" class="btn-close btn-close-drawer"></button>
+    </div>
+    <div class="mobile-drawer-body">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li class="mobile-nav-item"><a href="treatments.html" class="mobile-nav-link">Treatments</a></li>
+        <li class="mobile-nav-item"><a href="providers.html" class="mobile-nav-link active">Providers</a></li>
+        <li class="mobile-nav-item"><a href="resources.html" class="mobile-nav-link">Journal</a></li>
+        <li class="mobile-nav-item"><a href="my-bookings.html" class="mobile-nav-link">My Bookings</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main style="padding-top: calc(var(--navbar-height) + 20px);">
+    <section class="section-padding-sm bg-surface-subtle border-bottom">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb small mb-2">
+                <li class="breadcrumb-item"><a href="index.html" class="text-muted text-decoration-none">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Providers</li>
+              </ol>
+            </nav>
+            <h1 class="h2 mb-1" style="font-family: var(--font-display);">Verified Skincare Specialists & Clinics</h1>
+            <p class="text-muted small mb-0">Browse certified dermatology clinics, medical spas, and master estheticians with verified credentials.</p>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="input-group">
+              <span class="input-group-text bg-surface border-end-0"><i class="bi bi-search text-sage"></i></span>
+              <input type="text" class="form-control bg-surface border-start-0 py-2" id="providerFilterSearch" placeholder="Search by clinic name, doctor, or city..." aria-label="Search providers">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Provider Marketplace List -->
+    <section class="section-padding">
+      <div class="container">
+        <!-- Controls Bar -->
+        <div class="row align-items-center mb-4 g-3">
+          <div class="col-md-5">
+            <span id="providersCountLabel" class="fw-semibold text-muted small">Showing verified providers</span>
+          </div>
+
+          <div class="col-md-7">
+            <div class="d-flex flex-wrap justify-content-md-end align-items-center gap-3">
+              <!-- Type Filter -->
+              <div class="d-flex align-items-center gap-2">
+                <label class="small text-muted mb-0" for="providerTypeFilter">Type:</label>
+                <select class="form-select form-select-sm" id="providerTypeFilter" style="width: 175px;">
+                  <option value="All">All Provider Types</option>
+                  <option value="Dermatology Clinics">Dermatology Clinics</option>
+                  <option value="Skin Specialists">Skin Specialists</option>
+                  <option value="Estheticians">Estheticians</option>
+                  <option value="Beauty Studios">Beauty Studios</option>
+                  <option value="Wellness Clinics">Wellness Clinics</option>
+                </select>
+              </div>
+
+              <!-- Sort Filter -->
+              <div class="d-flex align-items-center gap-2">
+                <label class="small text-muted mb-0" for="providerSortSelect">Sort:</label>
+                <select class="form-select form-select-sm" id="providerSortSelect" style="width: 160px;">
+                  <option value="recommended">Recommended</option>
+                  <option value="rating">Highest Rated</option>
+                  <option value="reviews">Most Reviews</option>
+                  <option value="price-low">Starting Price: Low</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic Providers Grid -->
+        <div class="row g-4" id="providersGridMount">
+          <!-- Populated by filters.js / providers.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="lumea-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <div class="footer-brand-name">LUMÉA</div>
+          <div class="footer-tagline">“Discover Better Skin. Book With Confidence.”</div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <div class="footer-title">Explore</div>
+          <ul class="footer-nav">
+            <li><a href="treatments.html">Treatments</a></li>
+            <li><a href="providers.html">Providers</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="footer-title">For Providers</div>
+          <ul class="footer-nav">
+            <li><a href="signup.html?type=provider">Become a Provider</a></li>
+            <li><a href="manage-availability.html">Manage Availability</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <div class="footer-title">Company</div>
+          <ul class="footer-nav">
+            <li><a href="about.html">About LUMÉA</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 LUMÉA Marketplace Inc. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/notifications.js"></script>
+  <script src="assets/js/favorites.js"></script>
+  <script src="assets/js/treatments.js"></script>
+  <script src="assets/js/providers.js"></script>
+  <script src="assets/js/quotes.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/search.js"></script>
+  <script src="assets/js/filters.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

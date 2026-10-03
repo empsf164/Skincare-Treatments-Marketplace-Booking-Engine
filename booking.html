@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treatment Booking Engine — LUMÉA</title>
+  <meta name="description" content="Multi-step booking engine for clinical skincare treatments with real-time slot locking and transparent deposit checkout.">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <script src="assets/js/theme.js"></script>
+</head>
+<body>
+
+  <!-- Mandatory Navbar -->
+  <header class="lumea-navbar scrolled">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-brand-lumea">
+        <div class="brand-symbol">L</div>
+        <div class="brand-text">
+          <span class="brand-name">LUMÉA</span>
+          <span class="brand-tagline">Skincare Engine</span>
+        </div>
+      </a>
+
+      <ul class="navbar-nav-main">
+        <li class="nav-item-lumea"><a href="index.html" class="nav-link-lumea">Home</a></li>
+        <li class="nav-item-lumea"><a href="treatments.html" class="nav-link-lumea">Treatments</a></li>
+        <li class="nav-item-lumea"><a href="providers.html" class="nav-link-lumea">Providers</a></li>
+        <li class="nav-item-lumea"><a href="resources.html" class="nav-link-lumea">Journal</a></li>
+        <li class="nav-item-lumea"><a href="my-bookings.html" class="nav-link-lumea">My Bookings</a></li>
+      </ul>
+
+      <div class="navbar-actions">
+        <button type="button" class="btn-search-trigger" aria-label="Search"><i class="bi bi-search"></i></button>
+        <button type="button" class="btn-theme-toggle" aria-label="Theme toggle"><i class="bi bi-moon-stars-fill"></i></button>
+        <div id="navbarAuthActions" class="d-inline-flex align-items-center gap-2"></div>
+        <button type="button" class="btn-hamburger" aria-label="Mobile menu"><i class="bi bi-list"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop"></div>
+  <aside class="mobile-nav-drawer">
+    <div class="mobile-drawer-header">
+      <div class="d-flex align-items-center gap-2">
+        <div class="brand-symbol" style="width:32px; height:32px;">L</div>
+        <span class="brand-name" style="font-size:1.35rem;">LUMÉA</span>
+      </div>
+      <button type="button" class="btn-close btn-close-drawer"></button>
+    </div>
+    <div class="mobile-drawer-body">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li class="mobile-nav-item"><a href="treatments.html" class="mobile-nav-link">Treatments</a></li>
+        <li class="mobile-nav-item"><a href="providers.html" class="mobile-nav-link">Providers</a></li>
+        <li class="mobile-nav-item"><a href="my-bookings.html" class="mobile-nav-link">My Bookings</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main style="padding-top: calc(var(--navbar-height) + 20px);" id="bookingWorkflowRoot">
+    <div class="container py-4">
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb small mb-3">
+          <li class="breadcrumb-item"><a href="index.html" class="text-muted text-decoration-none">Home</a></li>
+          <li class="breadcrumb-item"><a href="treatments.html" class="text-muted text-decoration-none">Treatments</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Booking Engine</li>
+        </ol>
+      </nav>
+
+      <div class="text-center mb-4">
+        <span class="section-eyebrow"><i class="bi bi-shield-lock-fill"></i> Guaranteed Reservation</span>
+        <h1 class="h2 mb-1" style="font-family: var(--font-display);">Customize & Book Your Treatment</h1>
+        <p class="text-muted small">Real-time scheduling with verified dermatology studios and master estheticians.</p>
+      </div>
+
+      <!-- 6-Step Stepper Header -->
+      <div class="booking-stepper mb-4">
+        <div class="step-item active" data-step="1">
+          <div class="step-circle">1</div>
+          <div class="step-label">Treatment</div>
+        </div>
+        <div class="step-item" data-step="2">
+          <div class="step-circle">2</div>
+          <div class="step-label">Date & Time</div>
+        </div>
+        <div class="step-item" data-step="4">
+          <div class="step-circle">3</div>
+          <div class="step-label">Add-ons</div>
+        </div>
+        <div class="step-item" data-step="5">
+          <div class="step-circle">4</div>
+          <div class="step-label">Intake Info</div>
+        </div>
+        <div class="step-item" data-step="6">
+          <div class="step-circle">5</div>
+          <div class="step-label">Review</div>
+        </div>
+      </div>
+
+      <!-- Two Column Workflow: Step Interactive Card + Sticky Summary -->
+      <div class="row g-4">
+        <!-- Main Form Step Area -->
+        <div class="col-lg-8" id="stepContentArea">
+          <!-- Populated dynamically by booking.js -->
+        </div>
+
+        <!-- Sticky Sidebar Summary -->
+        <div class="col-lg-4" id="bookingSidebarSummary">
+          <!-- Populated dynamically by booking.js -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="lumea-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <div class="footer-brand-name">LUMÉA</div>
+          <div class="footer-tagline">“Discover Better Skin. Book With Confidence.”</div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <div class="footer-title">Explore</div>
+          <ul class="footer-nav">
+            <li><a href="treatments.html">Treatments</a></li>
+            <li><a href="providers.html">Providers</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="footer-title">For Providers</div>
+          <ul class="footer-nav">
+            <li><a href="signup.html?type=provider">Become a Provider</a></li>
+            <li><a href="manage-availability.html">Manage Availability</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <div class="footer-title">Company</div>
+          <ul class="footer-nav">
+            <li><a href="about.html">About LUMÉA</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 LUMÉA Marketplace Inc. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/notifications.js"></script>
+  <script src="assets/js/favorites.js"></script>
+  <script src="assets/js/treatments.js"></script>
+  <script src="assets/js/providers.js"></script>
+  <script src="assets/js/quotes.js"></script>
+  <script src="assets/js/calendar.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/search.js"></script>
+  <script src="assets/js/booking.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

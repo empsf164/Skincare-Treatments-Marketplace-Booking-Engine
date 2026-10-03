@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointment Confirmed — LUMÉA</title>
+  <meta name="description" content="Your skincare treatment appointment and slot have been successfully reserved and confirmed.">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <script src="assets/js/theme.js"></script>
+</head>
+<body>
+
+  <!-- Mandatory Navbar -->
+  <header class="lumea-navbar scrolled">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-brand-lumea">
+        <div class="brand-symbol">L</div>
+        <div class="brand-text">
+          <span class="brand-name">LUMÉA</span>
+          <span class="brand-tagline">Skincare Engine</span>
+        </div>
+      </a>
+
+      <ul class="navbar-nav-main">
+        <li class="nav-item-lumea"><a href="index.html" class="nav-link-lumea">Home</a></li>
+        <li class="nav-item-lumea"><a href="treatments.html" class="nav-link-lumea">Treatments</a></li>
+        <li class="nav-item-lumea"><a href="providers.html" class="nav-link-lumea">Providers</a></li>
+        <li class="nav-item-lumea"><a href="my-bookings.html" class="nav-link-lumea">My Bookings</a></li>
+      </ul>
+
+      <div class="navbar-actions">
+        <button type="button" class="btn-theme-toggle" aria-label="Theme toggle"><i class="bi bi-moon-stars-fill"></i></button>
+        <div id="navbarAuthActions" class="d-inline-flex align-items-center gap-2"></div>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: calc(var(--navbar-height) + 30px); padding-bottom: 60px;">
+    <div class="container" style="max-width: 860px;">
+      <!-- Main Confirmed Card -->
+      <div class="lumea-card p-4 p-md-5 text-center shadow-lg mb-4">
+        <div class="brand-symbol mx-auto mb-3" style="width: 68px; height: 68px; font-size: 2rem; background: var(--brand-sage);">
+          <i class="bi bi-check2"></i>
+        </div>
+
+        <span class="badge-lumea badge-verified mb-2">Slot Locked & Confirmed</span>
+        <h1 class="display-6 mb-2" style="font-family: var(--font-display);">Your Appointment Is Confirmed</h1>
+        <p class="lead text-muted mb-4">A reservation receipt and clinical intake packet have been emailed to you.</p>
+
+        <!-- Booking Key Details Box -->
+        <div class="p-4 bg-surface-subtle rounded-3 text-start mb-4 border">
+          <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-2 border-bottom">
+            <div>
+              <span class="text-muted small d-block">Booking Reference</span>
+              <span class="fw-bold text-sage" style="font-size: 1.15rem;" id="confRefNumber">LUM-849201</span>
+            </div>
+            <div class="text-md-end">
+              <span class="text-muted small d-block">Transaction ID</span>
+              <span class="fw-semibold" id="confTxnNumber">TXN-948201</span>
+            </div>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <span class="text-muted small d-block">Treatment Protocol</span>
+              <span class="fw-bold" id="confTreatmentName">Hydrafacial MD® Elite Infusion (60 min)</span>
+            </div>
+            <div class="col-md-6">
+              <span class="text-muted small d-block">Specialist & Clinic</span>
+              <span class="fw-bold" id="confProviderName">Aesthétika Advanced Dermatology</span>
+            </div>
+            <div class="col-md-6">
+              <span class="text-muted small d-block">Appointment Date & Time</span>
+              <span class="fw-bold text-sage" id="confDateTime"><i class="bi bi-calendar-check me-1"></i>Saturday, Oct 10 at 02:30 PM</span>
+            </div>
+            <div class="col-md-6">
+              <span class="text-muted small d-block">Clinic Location</span>
+              <span class="fw-semibold" id="confLocation">Bandra West, Mumbai</span>
+            </div>
+            <div class="col-md-6">
+              <span class="text-muted small d-block">Deposit Paid Today</span>
+              <span class="fw-bold text-sage" id="confDepositPaid">₹1,340</span>
+            </div>
+            <div class="col-md-6">
+              <span class="text-muted small d-block">Remaining Balance (Pay at Clinic)</span>
+              <span class="fw-bold" id="confRemainingBalance">₹5,358</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="d-flex flex-wrap justify-content-center gap-3 mb-5">
+          <button type="button" class="btn btn-primary" id="btnAddToCalendarIcs">
+            <i class="bi bi-calendar-plus me-2"></i> Add to Calendar (.ICS)
+          </button>
+          <a href="my-bookings.html" class="btn btn-secondary">
+            <i class="bi bi-calendar-check me-2"></i> View in My Bookings
+          </a>
+          <a href="contact.html?subject=provider-contact" class="btn btn-outline-secondary">
+            <i class="bi bi-chat-dots me-2"></i> Contact Provider
+          </a>
+        </div>
+
+        <!-- Visual Timeline of Appointment -->
+        <div class="text-start">
+          <h5 class="mb-3" style="font-family: var(--font-display);">Next Steps Timeline</h5>
+          <div class="appointment-timeline">
+            <div class="timeline-event">
+              <div class="timeline-dot"></div>
+              <div class="fw-bold small">1. Immediate Confirmation (Done)</div>
+              <p class="text-muted small mb-0">Your specialist calendar room is locked. SMS & Email confirmations dispatched.</p>
+            </div>
+            <div class="timeline-event">
+              <div class="timeline-dot" style="background:var(--brand-sand-dark);"></div>
+              <div class="fw-bold small">2. Digital Intake Questionnaire (24h prior)</div>
+              <p class="text-muted small mb-0">A quick 2-minute skin history checklist will be sent to optimize your customized boosters.</p>
+            </div>
+            <div class="timeline-event">
+              <div class="timeline-dot" style="background:var(--brand-clay);"></div>
+              <div class="fw-bold small">3. Clinic Check-in & Treatment</div>
+              <p class="text-muted small mb-0">Arrive 10 minutes prior, enjoy your treatment, and settle the remaining balance in clinic.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Policy Reminder Card -->
+      <div class="lumea-card p-4 bg-surface-subtle border text-muted small">
+        <div class="d-flex align-items-center gap-2 mb-1 text-primary fw-semibold">
+          <i class="bi bi-info-circle text-sage"></i> Need to change your plans?
+        </div>
+        <div>You can reschedule or cancel this appointment anytime up to 24 hours prior from your <a href="my-bookings.html" class="text-sage fw-semibold">My Bookings</a> dashboard without losing your deposit.</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="lumea-footer">
+    <div class="container text-center">
+      <div class="footer-brand-name">LUMÉA</div>
+      <div class="footer-tagline">“Discover Better Skin. Book With Confidence.”</div>
+      <div class="mt-4 small text-muted">&copy; 2026 LUMÉA Marketplace Inc. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/notifications.js"></script>
+  <script src="assets/js/favorites.js"></script>
+  <script src="assets/js/treatments.js"></script>
+  <script src="assets/js/providers.js"></script>
+  <script src="assets/js/bookings.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let booking = null;
+      try {
+        booking = JSON.parse(sessionStorage.getItem('lumea_last_confirmed_booking'));
+      } catch (e) {}
+
+      if (!booking) {
+        booking = window.LumeaBookings?.getAll()[0] || {
+          id: 'LUM-849201',
+          treatmentTitle: 'Hydrafacial MD® Elite Infusion',
+          providerName: 'Aesthétika Advanced Dermatology',
+          location: 'Bandra West, Mumbai',
+          dateFormatted: 'Oct 10, 2026',
+          timeSlot: '02:30 PM',
+          deposit: 1340,
+          balance: 5358,
+          transactionRef: 'TXN-948201'
+        };
+      }
+
+      document.getElementById('confRefNumber').textContent = booking.id;
+      document.getElementById('confTxnNumber').textContent = booking.transactionRef || 'TXN-' + Math.floor(100000 + Math.random()*900000);
+      document.getElementById('confTreatmentName').textContent = `${booking.treatmentTitle} (${booking.durationMinutes || 60} min)`;
+      document.getElementById('confProviderName').textContent = booking.providerName;
+      document.getElementById('confDateTime').innerHTML = `<i class="bi bi-calendar-check me-1"></i>${booking.dateFormatted} at ${booking.timeSlot}`;
+      document.getElementById('confLocation').textContent = booking.location;
+      document.getElementById('confDepositPaid').textContent = `₹${(booking.deposit || 1340).toLocaleString()}`;
+      document.getElementById('confRemainingBalance').textContent = `₹${(booking.balance || 5358).toLocaleString()}`;
+
+      // Calendar button
+      const calBtn = document.getElementById('btnAddToCalendarIcs');
+      if (calBtn) {
+        calBtn.addEventListener('click', () => {
+          window.LumeaBookings?.generateIcs(booking);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

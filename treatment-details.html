@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treatment Details & Instant Quote Engine — LUMÉA Skincare</title>
+  <meta name="description" content="View comprehensive clinical treatment details, preparation, aftercare protocols, and build an instant customized price quote.">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <script src="assets/js/theme.js"></script>
+</head>
+<body>
+
+  <!-- Mandatory Navbar -->
+  <header class="lumea-navbar scrolled">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-brand-lumea">
+        <div class="brand-symbol">L</div>
+        <div class="brand-text">
+          <span class="brand-name">LUMÉA</span>
+          <span class="brand-tagline">Skincare Engine</span>
+        </div>
+      </a>
+
+      <ul class="navbar-nav-main">
+        <li class="nav-item-lumea"><a href="index.html" class="nav-link-lumea">Home</a></li>
+        <li class="nav-item-lumea">
+          <a href="treatments.html" class="nav-link-lumea active" aria-haspopup="true">
+            Treatments <i class="bi bi-chevron-down" style="font-size: 0.75rem;"></i>
+          </a>
+          <ul class="lumea-dropdown-menu dropdown-wide">
+            <li><a class="dropdown-link-lumea" href="treatments.html?category=Hydrafacials"><i class="bi bi-droplet-half"></i> Hydrafacials</a></li>
+            <li><a class="dropdown-link-lumea" href="treatments.html?category=Chemical+Peels"><i class="bi bi-magic"></i> Chemical Peels</a></li>
+            <li><a class="dropdown-link-lumea" href="treatments.html?category=Microneedling"><i class="bi bi-bullseye"></i> Microneedling</a></li>
+            <li><a class="dropdown-link-lumea" href="treatments.html?category=LED+Therapy"><i class="bi bi-lamp"></i> LED Therapy</a></li>
+            <li class="dropdown-divider-lumea"></li>
+            <li style="grid-column:1/-1;"><a class="dropdown-link-lumea fw-bold text-sage" href="treatments.html"><i class="bi bi-grid-fill"></i> View All Treatments</a></li>
+          </ul>
+        </li>
+        <li class="nav-item-lumea"><a href="providers.html" class="nav-link-lumea">Providers</a></li>
+        <li class="nav-item-lumea"><a href="resources.html" class="nav-link-lumea">Journal</a></li>
+        <li class="nav-item-lumea"><a href="about.html" class="nav-link-lumea">About</a></li>
+      </ul>
+
+      <div class="navbar-actions">
+        <button type="button" class="btn-search-trigger" aria-label="Search"><i class="bi bi-search"></i></button>
+        <button type="button" class="btn-theme-toggle" aria-label="Theme toggle"><i class="bi bi-moon-stars-fill"></i></button>
+        <a href="my-bookings.html" class="btn-favorites-nav" aria-label="Saved"><i class="bi bi-heart"></i><span class="fav-counter-badge" style="display:none;">0</span></a>
+        <div id="navbarAuthActions" class="d-inline-flex align-items-center gap-2"></div>
+        <a href="booking.html" class="btn btn-primary d-none d-lg-inline-flex">Book a Treatment</a>
+        <button type="button" class="btn-hamburger" aria-label="Mobile menu"><i class="bi bi-list"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop"></div>
+  <aside class="mobile-nav-drawer">
+    <div class="mobile-drawer-header">
+      <div class="d-flex align-items-center gap-2">
+        <div class="brand-symbol" style="width:32px; height:32px;">L</div>
+        <span class="brand-name" style="font-size:1.35rem;">LUMÉA</span>
+      </div>
+      <button type="button" class="btn-close btn-close-drawer"></button>
+    </div>
+    <div class="mobile-drawer-body">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li class="mobile-nav-item"><a href="treatments.html" class="mobile-nav-link active">Treatments</a></li>
+        <li class="mobile-nav-item"><a href="providers.html" class="mobile-nav-link">Providers</a></li>
+        <li class="mobile-nav-item"><a href="resources.html" class="mobile-nav-link">Journal</a></li>
+        <li class="mobile-nav-item"><a href="my-bookings.html" class="mobile-nav-link">My Bookings</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main style="padding-top: calc(var(--navbar-height) + 20px);">
+    <div class="container py-4">
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb small mb-3">
+          <li class="breadcrumb-item"><a href="index.html" class="text-muted text-decoration-none">Home</a></li>
+          <li class="breadcrumb-item"><a href="treatments.html" class="text-muted text-decoration-none">Treatments</a></li>
+          <li class="breadcrumb-item active" id="detailBreadcrumbTitle" aria-current="page">Treatment Details</li>
+        </ol>
+      </nav>
+
+      <!-- Main Two Column Grid: Left Content + Right Interactive Quote Engine -->
+      <div class="row g-5">
+        <!-- Left Column: Details & Clinical Protocols -->
+        <div class="col-lg-7">
+          <!-- Top Header -->
+          <div class="mb-4">
+            <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+              <span class="badge-lumea badge-sage" id="detailCategoryBadge">Clinical Protocol</span>
+              <span class="badge-rating" id="detailRatingBadge"><i class="bi bi-star-fill me-1"></i>4.96 (342 reviews)</span>
+              <span class="text-muted small" id="detailProvidersCountBadge"><i class="bi bi-hospital me-1"></i>18 Available Providers</span>
+            </div>
+            <h1 class="display-5 mb-2" id="detailTitle" style="font-family: var(--font-display);">Hydrafacial MD® Elite Infusion</h1>
+            <p class="lead" id="detailShortDesc">A patented 3-step medical-grade facial combining deep vortex cleansing, painless extraction, and antioxidant peptide infusion.</p>
+          </div>
+
+          <!-- Large Image Gallery -->
+          <div class="mb-5">
+            <div class="lumea-card overflow-hidden shadow-sm mb-2" style="aspect-ratio: 16/10;">
+              <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=80" id="detailMainImage" alt="Treatment Gallery View" class="w-100 h-100 object-fit-cover">
+            </div>
+          </div>
+
+          <!-- Section 1: About the Treatment -->
+          <div class="mb-5">
+            <h3 class="mb-3" style="font-family: var(--font-display);">About the Treatment</h3>
+            <p id="detailFullDesc" class="text-secondary" style="line-height: 1.75; font-size: 1.05rem;">
+              The Hydrafacial MD® is the gold standard in non-invasive clinical rejuvenation. Using patented Vortex-Fusion technology, it deeply cleanses congested pores, exfoliates dead cellular debris with mild salicylic and glycolic acids, and saturates the skin barrier with intensive hyaluronic acid, peptides, and botanical antioxidants.
+            </p>
+          </div>
+
+          <!-- Section 2: What It Includes -->
+          <div class="mb-5">
+            <h3 class="mb-3" style="font-family: var(--font-display);">What It Includes</h3>
+            <div class="lumea-card p-4 bg-surface-subtle">
+              <ul class="list-unstyled mb-0" id="detailIncludesList">
+                <!-- Injected via JavaScript -->
+              </ul>
+            </div>
+          </div>
+
+          <!-- Section 3 & 4: Duration & Recommended Frequency -->
+          <div class="row g-4 mb-5">
+            <div class="col-md-6">
+              <div class="lumea-card p-4 h-100">
+                <div class="text-sage mb-2" style="font-size: 1.5rem;"><i class="bi bi-clock-history"></i></div>
+                <h5 class="mb-1">Treatment Duration</h5>
+                <p class="text-muted small mb-0" id="detailDurationNote">30 to 75 minutes depending on chosen clinical customization and booster add-ons.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="lumea-card p-4 h-100">
+                <div class="text-clay mb-2" style="font-size: 1.5rem;"><i class="bi bi-calendar2-range"></i></div>
+                <h5 class="mb-1">Recommended Frequency</h5>
+                <p class="text-muted small mb-0" id="detailFrequency">Every 4 to 6 weeks for optimal skin barrier health and sustained pore purity.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 5: Preparation -->
+          <div class="mb-5">
+            <h3 class="mb-3" style="font-family: var(--font-display);">Preparation Guidelines</h3>
+            <div class="p-4 lumea-card border-start border-4 border-sage">
+              <p class="mb-0 text-secondary" id="detailPrep">Discontinue prescription retinol and direct active acids 3 days prior. Avoid recent sun exposure or harsh physical scrubs.</p>
+            </div>
+          </div>
+
+          <!-- Section 6: Aftercare -->
+          <div class="mb-5">
+            <h3 class="mb-3" style="font-family: var(--font-display);">Aftercare & Barrier Support</h3>
+            <div class="p-4 lumea-card border-start border-4 border-clay">
+              <p class="mb-0 text-secondary" id="detailAftercare">Maintain hydration, apply broad-spectrum SPF 50+, avoid heavy makeup for 12 hours, and enjoy immediate glass-skin luminosity.</p>
+            </div>
+          </div>
+
+          <!-- Section 7: Who It's For -->
+          <div class="mb-5">
+            <h3 class="mb-3" style="font-family: var(--font-display);">Who It's For</h3>
+            <p class="text-secondary" id="detailWhoFor">Ideal for all skin types, especially dehydrated, congested, dull, or event-ready complexions seeking instant glow with zero downtime.</p>
+            <div class="p-3 bg-surface-subtle rounded-3 small text-muted border">
+              <i class="bi bi-info-circle me-1 text-sage"></i> <strong>Informational notice:</strong> LUMÉA treatments are administered by licensed specialists for cosmetic barrier optimization and are not medical diagnoses of dermatological diseases.
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Instant Quote Engine & Availability Panel -->
+        <div class="col-lg-5">
+          <div class="sticky-top" style="top: calc(var(--navbar-height) + 20px); z-index: 10;">
+            <div class="quote-builder-card">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4 class="mb-0" style="font-family: var(--font-display);">Interactive Quote Engine</h4>
+                <span class="badge-lumea badge-sage"><i class="bi bi-lightning-charge-fill"></i> Live Calc</span>
+              </div>
+              <p class="text-muted small mb-4">Configure your protocol options to view an instant transparent price quote and deposit requirement.</p>
+
+              <!-- Option 1: Skin Goal -->
+              <div class="quote-option-group">
+                <label class="quote-group-title">1. Target Skin Focus</label>
+                <div class="quote-pills-grid" id="quoteSkinGoalPills">
+                  <button type="button" class="quote-pill-btn active" data-goal="Hydration">
+                    <div class="quote-pill-title">Hydration</div>
+                    <div class="quote-pill-sub">Barrier Quench</div>
+                  </button>
+                  <button type="button" class="quote-pill-btn" data-goal="Brightening">
+                    <div class="quote-pill-title">Brightening</div>
+                    <div class="quote-pill-sub">Radiance Glow</div>
+                  </button>
+                  <button type="button" class="quote-pill-btn" data-goal="Congestion">
+                    <div class="quote-pill-title">Congestion</div>
+                    <div class="quote-pill-sub">Pore Clearing</div>
+                  </button>
+                  <button type="button" class="quote-pill-btn" data-goal="Anti-Aging">
+                    <div class="quote-pill-title">Anti-Aging</div>
+                    <div class="quote-pill-sub">Firming Matrix</div>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Option 2: Duration Tiers -->
+              <div class="quote-option-group">
+                <label class="quote-group-title">2. Protocol Duration Tier</label>
+                <div class="quote-pills-grid" id="quoteDurationPillsMount">
+                  <!-- Injected via JavaScript -->
+                </div>
+              </div>
+
+              <!-- Option 3: Provider Selection -->
+              <div class="quote-option-group">
+                <label class="quote-group-title">3. Specialist Clinic Tier</label>
+                <select class="form-select" id="quoteProviderSelect">
+                  <!-- Injected via JavaScript -->
+                </select>
+              </div>
+
+              <!-- Option 4: Add-ons & Clinical Boosters -->
+              <div class="quote-option-group">
+                <label class="quote-group-title">4. Optional Clinical Add-ons</label>
+                <div id="quoteAddonsListMount">
+                  <!-- Injected via JavaScript -->
+                </div>
+              </div>
+
+              <!-- Dynamic Live Summary Panel -->
+              <div class="quote-summary-panel mt-4" id="quoteLiveSummaryMount">
+                <!-- Injected via quotes.js -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="lumea-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <div class="footer-brand-name">LUMÉA</div>
+          <div class="footer-tagline">“Discover Better Skin. Book With Confidence.”</div>
+          <p style="color: #A3ABB2; font-size: 0.9rem;">The premier marketplace for verified skincare treatments, dermatology clinics, and real-time scheduling.</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <div class="footer-title">Explore</div>
+          <ul class="footer-nav">
+            <li><a href="treatments.html">Treatments</a></li>
+            <li><a href="providers.html">Providers</a></li>
+            <li><a href="resources.html">Journal</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="footer-title">For Providers</div>
+          <ul class="footer-nav">
+            <li><a href="signup.html?type=provider">Become a Provider</a></li>
+            <li><a href="manage-availability.html">Manage Availability</a></li>
+            <li><a href="provider-setup.html">Clinic Setup</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <div class="footer-title">Company</div>
+          <ul class="footer-nav">
+            <li><a href="about.html">About LUMÉA</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html#faqs">FAQs</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 LUMÉA Marketplace Inc. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/notifications.js"></script>
+  <script src="assets/js/favorites.js"></script>
+  <script src="assets/js/treatments.js"></script>
+  <script src="assets/js/providers.js"></script>
+  <script src="assets/js/quotes.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/search.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Read URL treatment ID
+      const urlParams = new URLSearchParams(window.location.search);
+      const treatmentId = urlParams.get('id') || 'hydrafacial-md';
+      const treatment = window.LumeaTreatments?.getById(treatmentId);
+
+      if (!treatment) return;
+
+      // Populate static details
+      document.getElementById('detailBreadcrumbTitle').textContent = treatment.title;
+      document.getElementById('detailCategoryBadge').textContent = treatment.category;
+      document.getElementById('detailRatingBadge').innerHTML = `<i class="bi bi-star-fill me-1"></i>${treatment.rating} (${treatment.reviewsCount} reviews)`;
+      document.getElementById('detailProvidersCountBadge').innerHTML = `<i class="bi bi-hospital me-1"></i>${treatment.providerCount} Available Clinics`;
+      document.getElementById('detailTitle').textContent = treatment.title;
+      document.getElementById('detailShortDesc').textContent = treatment.shortDesc;
+      document.getElementById('detailFullDesc').textContent = treatment.fullDesc;
+      document.getElementById('detailMainImage').src = treatment.image;
+      document.getElementById('detailPrep').textContent = treatment.prep;
+      document.getElementById('detailAftercare').textContent = treatment.aftercare;
+      document.getElementById('detailFrequency').textContent = treatment.frequency;
+      document.getElementById('detailWhoFor').textContent = treatment.whoFor;
+
+      // What it includes list
+      const includesList = document.getElementById('detailIncludesList');
+      if (includesList && treatment.includes) {
+        includesList.innerHTML = treatment.includes.map(inc => `
+          <li class="d-flex align-items-center gap-2 mb-2">
+            <i class="bi bi-check-circle-fill text-sage"></i>
+            <span class="text-secondary">${inc}</span>
+          </li>
+        `).join('');
+      }
+
+      // Populate interactive quote duration tiers
+      const durationPillsMount = document.getElementById('quoteDurationPillsMount');
+      let currentDuration = (treatment.durationOptions && treatment.durationOptions[0]) ? treatment.durationOptions[0].duration : 60;
+
+      if (durationPillsMount && treatment.durationOptions) {
+        durationPillsMount.innerHTML = treatment.durationOptions.map((d, i) => `
+          <button type="button" class="quote-pill-btn ${i === 0 ? 'active' : ''}" data-duration="${d.duration}">
+            <div class="quote-pill-title">${d.label}</div>
+            <div class="quote-pill-sub">₹${d.price.toLocaleString()}</div>
+          </button>
+        `).join('');
+
+        durationPillsMount.querySelectorAll('.quote-pill-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            durationPillsMount.querySelectorAll('.quote-pill-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            currentDuration = Number(btn.getAttribute('data-duration'));
+            updateLiveQuote();
+          });
+        });
+      }
+
+      // Populate provider select
+      const providerSelect = document.getElementById('quoteProviderSelect');
+      const allProviders = window.LumeaProviders?.getAll() || [];
+      if (providerSelect) {
+        providerSelect.innerHTML = allProviders.map(p => `
+          <option value="${p.id}">${p.name} • ${p.location} (★ ${p.rating})</option>
+        `).join('');
+
+        providerSelect.addEventListener('change', () => {
+          updateLiveQuote();
+        });
+      }
+
+      // Populate add-ons
+      const addonsMount = document.getElementById('quoteAddonsListMount');
+      let selectedAddonIds = [];
+
+      if (addonsMount && treatment.availableAddons) {
+        addonsMount.innerHTML = treatment.availableAddons.map(addon => `
+          <div class="quote-addon-item" data-addon-id="${addon.id}">
+            <div class="d-flex align-items-center gap-2">
+              <input class="form-check-input" type="checkbox" id="chk_${addon.id}">
+              <div>
+                <div class="fw-semibold small">${addon.name}</div>
+                <div class="text-muted" style="font-size:0.75rem;">+${addon.duration} min</div>
+              </div>
+            </div>
+            <div class="fw-bold text-sage small">₹${addon.price.toLocaleString()}</div>
+          </div>
+        `).join('');
+
+        addonsMount.querySelectorAll('.quote-addon-item').forEach(item => {
+          item.addEventListener('click', (e) => {
+            const id = item.getAttribute('data-addon-id');
+            const chk = item.querySelector('input[type="checkbox"]');
+            if (selectedAddonIds.includes(id)) {
+              selectedAddonIds = selectedAddonIds.filter(x => x !== id);
+              item.classList.remove('selected');
+              if (chk) chk.checked = false;
+            } else {
+              selectedAddonIds.push(id);
+              item.classList.add('selected');
+              if (chk) chk.checked = true;
+            }
+            updateLiveQuote();
+          });
+        });
+      }
+
+      // Skin Goal Pills
+      let currentSkinGoal = 'Hydration';
+      document.querySelectorAll('#quoteSkinGoalPills .quote-pill-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('#quoteSkinGoalPills .quote-pill-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentSkinGoal = btn.getAttribute('data-goal');
+          updateLiveQuote();
+        });
+      });
+
+      // Update quote calculation
+      function updateLiveQuote() {
+        const quote = window.LumeaQuotes?.calculate({
+          treatmentId: treatment.id,
+          durationMinutes: currentDuration,
+          selectedAddonIds: selectedAddonIds,
+          providerId: providerSelect ? providerSelect.value : null,
+          skinGoal: currentSkinGoal
+        });
+
+        const summaryMount = document.getElementById('quoteLiveSummaryMount');
+        if (summaryMount && quote) {
+          window.LumeaQuotes.renderSummary(quote, summaryMount);
+        }
+      }
+
+      updateLiveQuote();
+    });
+  </script>
+</body>
+</html>

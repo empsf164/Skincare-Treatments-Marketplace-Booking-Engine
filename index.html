@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUMÉA — Skincare Treatments Marketplace & Booking Engine</title>
+  <meta name="description" content="Discover verified skincare professionals, compare treatments, receive instant quotes, check real-time availability, and book appointments with confidence.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="LUMÉA — Discover Better Skin. Book With Confidence.">
+  <meta property="og:description" content="The premier marketplace for verified skincare treatments, clinical facials, and dermatology specialists.">
+  <meta property="og:type" content="website">
+  
+  <!-- CSS Dependencies -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <!-- Immediate Theme Initializer -->
+  <script src="assets/js/theme.js"></script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       MANDATORY NAVBAR
+       ========================================================================== -->
+  <header class="lumea-navbar">
+    <div class="navbar-container">
+      <!-- Brand Logo -->
+      <a href="index.html" class="navbar-brand-lumea" aria-label="LUMÉA Home">
+        <div class="brand-symbol">L</div>
+        <div class="brand-text">
+          <span class="brand-name">LUMÉA</span>
+          <span class="brand-tagline">Skincare Engine</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <ul class="navbar-nav-main">
+        <li class="nav-item-lumea">
+          <a href="index.html" class="nav-link-lumea active">Home</a>
+        </li>
+
+        <!-- Treatments Dropdown -->
+        <li class="nav-item-lumea">
+          <a href="treatments.html" class="nav-link-lumea" aria-haspopup="true">
+            Treatments <i class="bi bi-chevron-down" style="font-size: 0.75rem;"></i>
+          </a>
+          <ul class="lumea-dropdown-menu dropdown-wide" aria-label="Treatments Submenu">
+            <li><a class="dropdown-link-lumea" href="treatments.html?category=Hydrafacials"><i class="bi bi-droplet-half"></i> Hydrafacials</a></li>
+            <li><a class="dropdown-link-lumea" href="treatments.html?category=Chemical+Peels"><i class="bi bi-magic"></i> Chemical Peels</a></li>
+            <li><a class="dropdown-link-lumea" href="treatments.html?category=Microneedling"><i class="bi bi-bullseye"></i> Microneedling</a></li>
+            <li><a class="dropdown-link-lumea" href="treatments.html?category=LED+Therapy"><i class="bi bi-lamp"></i> LED Therapy</a></li>
+            <li><a class="dropdown-link-lumea" href="treatments.html?category=Acne+Treatments"><i class="bi bi-shield-plus"></i> Acne Treatments</a></li>
+            <li><a class="dropdown-link-lumea" href="treatments.html?category=Anti-Aging+Treatments"><i class="bi bi-hourglass-split"></i> Anti-Aging Treatments</a></li>
+            <li><a class="dropdown-link-lumea" href="treatments.html?category=Skin+Brightening"><i class="bi bi-brightness-high"></i> Skin Brightening</a></li>
+            <li><a class="dropdown-link-lumea" href="treatments.html?category=Body+Treatments"><i class="bi bi-person-arms-up"></i> Body Treatments</a></li>
+            <li><a class="dropdown-link-lumea" href="treatments.html"><i class="bi bi-sparkles"></i> Facials & Deep Cleanse</a></li>
+            <li class="dropdown-divider-lumea"></li>
+            <li style="grid-column: 1 / -1;">
+              <a class="dropdown-link-lumea fw-bold text-sage" href="treatments.html">
+                <i class="bi bi-grid-fill"></i> View All Treatments & Instant Quotes &rarr;
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Providers Dropdown -->
+        <li class="nav-item-lumea">
+          <a href="providers.html" class="nav-link-lumea" aria-haspopup="true">
+            Providers <i class="bi bi-chevron-down" style="font-size: 0.75rem;"></i>
+          </a>
+          <ul class="lumea-dropdown-menu" aria-label="Providers Submenu">
+            <li><a class="dropdown-link-lumea" href="providers.html"><i class="bi bi-search"></i> Find Providers</a></li>
+            <li><a class="dropdown-link-lumea" href="providers.html?type=Dermatology+Clinics"><i class="bi bi-hospital"></i> Dermatology Clinics</a></li>
+            <li><a class="dropdown-link-lumea" href="providers.html?type=Estheticians"><i class="bi bi-person-check"></i> Estheticians</a></li>
+            <li><a class="dropdown-link-lumea" href="providers.html?type=Skin+Specialists"><i class="bi bi-award"></i> Skin Specialists</a></li>
+            <li><a class="dropdown-link-lumea" href="providers.html?type=Beauty+Studios"><i class="bi bi-gem"></i> Beauty Studios</a></li>
+            <li><a class="dropdown-link-lumea" href="providers.html?type=Wellness+Clinics"><i class="bi bi-heart-pulse"></i> Wellness Clinics</a></li>
+            <li class="dropdown-divider-lumea"></li>
+            <li><a class="dropdown-link-lumea fw-semibold text-sage" href="providers.html"><i class="bi bi-star-fill text-warning"></i> Featured Providers</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item-lumea">
+          <a href="treatments.html" class="nav-link-lumea">Explore</a>
+        </li>
+        <li class="nav-item-lumea">
+          <a href="#how-it-works" class="nav-link-lumea">How It Works</a>
+        </li>
+        <li class="nav-item-lumea">
+          <a href="resources.html" class="nav-link-lumea">Journal</a>
+        </li>
+        <li class="nav-item-lumea">
+          <a href="about.html" class="nav-link-lumea">About</a>
+        </li>
+      </ul>
+
+      <!-- Navbar Actions (Search, Theme, Favorites, Auth, CTA) -->
+      <div class="navbar-actions">
+        <!-- Search Trigger -->
+        <button type="button" class="btn-search-trigger" aria-label="Search treatments or providers" title="Search (Ctrl + K)">
+          <i class="bi bi-search"></i>
+        </button>
+
+        <!-- Theme Switcher -->
+        <button type="button" class="btn-theme-toggle" aria-label="Toggle dark/light theme" title="Toggle theme">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+
+        <!-- Saved/Favorites Trigger -->
+        <a href="my-bookings.html" class="btn-favorites-nav" aria-label="Saved Items" title="Saved Collection">
+          <i class="bi bi-heart"></i>
+          <span class="fav-counter-badge" style="display: none;">0</span>
+        </a>
+
+        <!-- Auth State Container -->
+        <div id="navbarAuthActions" class="d-inline-flex align-items-center gap-2">
+          <!-- Populated by auth.js -->
+        </div>
+
+        <!-- Primary CTA -->
+        <a href="booking.html" class="btn btn-primary d-none d-lg-inline-flex">
+          <i class="bi bi-calendar2-check me-1"></i> Book a Treatment
+        </a>
+
+        <!-- Mobile Hamburger -->
+        <button type="button" class="btn-hamburger" aria-label="Open mobile menu">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Offcanvas Drawer -->
+  <div class="drawer-backdrop"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="d-flex align-items-center gap-2">
+        <div class="brand-symbol" style="width:32px; height:32px; font-size:1.1rem;">L</div>
+        <span class="brand-name" style="font-size:1.35rem;">LUMÉA</span>
+      </div>
+      <button type="button" class="btn-close btn-close-drawer" aria-label="Close menu"></button>
+    </div>
+    <div class="mobile-drawer-body">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item">
+          <a href="index.html" class="mobile-nav-link active">Home</a>
+        </li>
+        <li class="mobile-nav-item">
+          <div class="mobile-nav-link mobile-dropdown-toggle">
+            <span>Treatments</span>
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="mobile-dropdown-content">
+            <a href="treatments.html?category=Hydrafacials" class="mobile-sublink">Hydrafacials</a>
+            <a href="treatments.html?category=Chemical+Peels" class="mobile-sublink">Chemical Peels</a>
+            <a href="treatments.html?category=Microneedling" class="mobile-sublink">Microneedling</a>
+            <a href="treatments.html?category=LED+Therapy" class="mobile-sublink">LED Therapy</a>
+            <a href="treatments.html?category=Acne+Treatments" class="mobile-sublink">Acne Treatments</a>
+            <a href="treatments.html?category=Anti-Aging+Treatments" class="mobile-sublink">Anti-Aging Treatments</a>
+            <a href="treatments.html" class="mobile-sublink fw-bold text-sage">All Treatments &rarr;</a>
+          </div>
+        </li>
+        <li class="mobile-nav-item">
+          <div class="mobile-nav-link mobile-dropdown-toggle">
+            <span>Providers</span>
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="mobile-dropdown-content">
+            <a href="providers.html" class="mobile-sublink">Find Providers</a>
+            <a href="providers.html?type=Dermatology+Clinics" class="mobile-sublink">Dermatology Clinics</a>
+            <a href="providers.html?type=Estheticians" class="mobile-sublink">Estheticians</a>
+            <a href="providers.html?type=Skin+Specialists" class="mobile-sublink">Skin Specialists</a>
+            <a href="providers.html" class="mobile-sublink fw-bold text-sage">Featured Clinics &rarr;</a>
+          </div>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="treatments.html" class="mobile-nav-link">Explore</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="#how-it-works" class="mobile-nav-link">How It Works</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="resources.html" class="mobile-nav-link">Journal</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="about.html" class="mobile-nav-link">About LUMÉA</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="my-bookings.html" class="mobile-nav-link">My Bookings</a>
+        </li>
+      </ul>
+
+      <div class="mt-4 pt-3 border-top">
+        <a href="booking.html" class="btn btn-primary w-100 mb-2">
+          <i class="bi bi-calendar2-check me-2"></i> Book a Treatment
+        </a>
+        <a href="login.html" class="btn btn-outline-secondary w-100">
+          Client / Provider Sign In
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION WITH MARKETPLACE SEARCH
+         ========================================================================== -->
+    <section class="hero-section position-relative pt-5 pb-5" style="background: radial-gradient(circle at 80% 20%, var(--bg-accent-light) 0%, var(--bg-primary) 65%);">
+      <div class="container pt-4 pb-4">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7">
+            <div class="hero-content-reveal">
+              <span class="section-eyebrow">
+                <i class="bi bi-stars"></i> Verified Clinical Marketplace
+              </span>
+              <h1 class="display-3 mb-3 fw-normal" style="font-family: var(--font-display);">
+                Discover Better Skin.<br>
+                <span class="fst-italic text-sage">Book With Confidence.</span>
+              </h1>
+              <p class="lead mb-4" style="max-width: 580px;">
+                LUMÉA unites board-certified dermatology clinics, certified master estheticians, and precision medical protocols. Compare treatments, get instant live quotes, check real-time availability, and securely reserve your session.
+              </p>
+              
+              <div class="d-flex flex-wrap gap-3 mb-5">
+                <a href="treatments.html" class="btn btn-primary btn-lg">
+                  <i class="bi bi-search me-2"></i> Find a Treatment
+                </a>
+                <a href="providers.html" class="btn btn-secondary btn-lg">
+                  <i class="bi bi-hospital me-2"></i> Explore Providers
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="position-relative hero-content-reveal">
+              <div class="lumea-card overflow-hidden shadow-xl" style="border-radius: var(--radius-xl);">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=80" alt="Clinical Skincare Treatment Session" style="height: 380px; width: 100%; object-fit: cover;">
+                <div class="p-3 bg-surface d-flex align-items-center justify-content-between">
+                  <div>
+                    <span class="badge-lumea badge-sage mb-1"><i class="bi bi-patch-check-fill"></i> Most Booked Today</span>
+                    <div class="fw-bold" style="font-family: var(--font-display); font-size:1.25rem;">Hydrafacial MD® Elite</div>
+                  </div>
+                  <div class="text-end">
+                    <div class="text-muted small">Starting from</div>
+                    <div class="fw-bold text-sage" style="font-size:1.15rem;">₹5,499</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Floating Live Verified Badge -->
+              <div class="glass-panel position-absolute p-3 rounded-4 shadow-lg d-none d-sm-flex align-items-center gap-3" style="bottom: -20px; left: -25px; max-width: 280px; z-index: 3;">
+                <div class="brand-symbol" style="background: var(--brand-clay); width:36px; height:36px; font-size:1rem;">
+                  <i class="bi bi-shield-check"></i>
+                </div>
+                <div>
+                  <div class="fw-bold small" style="color:var(--text-primary);">100% Verified Providers</div>
+                  <div class="text-muted" style="font-size:0.75rem;">Licensed & sterilized clinic standards</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Interactive Search Engine -->
+        <div class="row mt-4">
+          <div class="col-12">
+            <div class="hero-search-container">
+              <form id="heroSearchForm">
+                <div class="hero-search-grid">
+                  <div class="hero-search-col">
+                    <label class="hero-search-label" for="heroSearchTreatment">
+                      <i class="bi bi-search text-sage me-1"></i> What treatment?
+                    </label>
+                    <input type="text" class="hero-search-input" id="heroSearchTreatment" placeholder="e.g. Hydrafacial, Peels, Microneedling..." autocomplete="off">
+                  </div>
+
+                  <div class="hero-search-col">
+                    <label class="hero-search-label" for="heroSearchLocation">
+                      <i class="bi bi-geo-alt text-sage me-1"></i> Where?
+                    </label>
+                    <select class="hero-search-input" id="heroSearchLocation">
+                      <option value="All Locations">All Locations</option>
+                      <option value="Mumbai">Mumbai (Bandra, Juhu)</option>
+                      <option value="Bengaluru">Bengaluru (Indiranagar, Koramangala)</option>
+                      <option value="New Delhi">New Delhi (Vasant Vihar, South Ext)</option>
+                      <option value="Pune">Pune (Koregaon Park)</option>
+                      <option value="Hyderabad">Hyderabad (Jubilee Hills)</option>
+                      <option value="Chennai">Chennai (T Nagar)</option>
+                    </select>
+                  </div>
+
+                  <div class="hero-search-col">
+                    <label class="hero-search-label" for="heroSearchDate">
+                      <i class="bi bi-calendar-event text-sage me-1"></i> When?
+                    </label>
+                    <input type="date" class="hero-search-input" id="heroSearchDate" value="2026-10-05">
+                  </div>
+
+                  <div class="hero-search-col">
+                    <button type="submit" class="btn btn-primary w-100 btn-lg">
+                      <i class="bi bi-stars me-1"></i> Find Available Treatments
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         EXPLORE BY SKIN GOAL
+         ========================================================================== -->
+    <section class="section-padding bg-surface-subtle">
+      <div class="container">
+        <div class="text-center section-header">
+          <span class="section-eyebrow">Targeted Solutions</span>
+          <h2 class="section-title">Explore by Skin Goal</h2>
+          <p class="section-description">Filter clinically proven treatments designed specifically for your skin condition and barrier needs.</p>
+        </div>
+
+        <div class="row g-3 justify-content-center">
+          <div class="col-6 col-md-4 col-lg-3">
+            <a href="treatments.html?concern=Acne+%26+Breakouts" class="lumea-card lumea-card-hover p-4 text-center text-decoration-none d-block h-100">
+              <div class="mb-3 text-clay" style="font-size: 2rem;"><i class="bi bi-shield-slash"></i></div>
+              <h5 class="mb-1 text-primary">Acne & Breakouts</h5>
+              <p class="text-muted small mb-0">Extractions, salicylic peels & high-frequency</p>
+            </a>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <a href="treatments.html?concern=Hydration" class="lumea-card lumea-card-hover p-4 text-center text-decoration-none d-block h-100">
+              <div class="mb-3 text-sage" style="font-size: 2rem;"><i class="bi bi-droplet-fill"></i></div>
+              <h5 class="mb-1 text-primary">Barrier Hydration</h5>
+              <p class="text-muted small mb-0">Deep vortex infusion & hyaluronic quench</p>
+            </a>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <a href="treatments.html?concern=Brightening" class="lumea-card lumea-card-hover p-4 text-center text-decoration-none d-block h-100">
+              <div class="mb-3 text-sand" style="font-size: 2rem;"><i class="bi bi-brightness-high-fill"></i></div>
+              <h5 class="mb-1 text-primary">Glow & Brightening</h5>
+              <p class="text-muted small mb-0">Vitamin C iontophoresis & radiance peels</p>
+            </a>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <a href="treatments.html?concern=Texture" class="lumea-card lumea-card-hover p-4 text-center text-decoration-none d-block h-100">
+              <div class="mb-3 text-sage" style="font-size: 2rem;"><i class="bi bi-grid-3x3"></i></div>
+              <h5 class="mb-1 text-primary">Texture & Pores</h5>
+              <p class="text-muted small mb-0">Microneedling & biphasic peeling</p>
+            </a>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <a href="treatments.html?concern=Anti-Aging" class="lumea-card lumea-card-hover p-4 text-center text-decoration-none d-block h-100">
+              <div class="mb-3 text-clay" style="font-size: 2rem;"><i class="bi bi-hourglass-split"></i></div>
+              <h5 class="mb-1 text-primary">Anti-Aging & Firming</h5>
+              <p class="text-muted small mb-0">RF micro-tightening & exosome stimulation</p>
+            </a>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <a href="treatments.html?concern=Sensitivity" class="lumea-card lumea-card-hover p-4 text-center text-decoration-none d-block h-100">
+              <div class="mb-3 text-sage" style="font-size: 2rem;"><i class="bi bi-heart-pulse"></i></div>
+              <h5 class="mb-1 text-primary">Calm & Sensitivity</h5>
+              <p class="text-muted small mb-0">Medical Tri-Wave LED & soothing cryo</p>
+            </a>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <a href="treatments.html?concern=Maintenance" class="lumea-card lumea-card-hover p-4 text-center text-decoration-none d-block h-100">
+              <div class="mb-3 text-sand" style="font-size: 2rem;"><i class="bi bi-calendar2-check"></i></div>
+              <h5 class="mb-1 text-primary">Monthly Maintenance</h5>
+              <p class="text-muted small mb-0">Custom clinical facials & barrier resets</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FEATURED TREATMENTS
+         ========================================================================== -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-end justify-content-between mb-4">
+          <div>
+            <span class="section-eyebrow">Signature Protocols</span>
+            <h2 class="section-title mb-0">Featured Treatments</h2>
+          </div>
+          <a href="treatments.html" class="btn btn-outline-primary">
+            View All Treatments &rarr;
+          </a>
+        </div>
+
+        <div class="row g-4" id="homeFeaturedTreatmentsMount">
+          <!-- Hydrafacial -->
+          <div class="col-md-6 col-lg-4">
+            <div class="treatment-card">
+              <div class="treatment-card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=80" alt="Hydrafacial MD Elite">
+                <span class="treatment-card-badge badge-lumea badge-sage">Hydrafacial</span>
+                <button type="button" class="treatment-fav-btn" data-fav-type="treatments" data-fav-id="hydrafacial-md" data-fav-title="Hydrafacial MD® Elite Infusion" aria-label="Save treatment">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+              <div class="treatment-card-body">
+                <div class="treatment-meta-chips">
+                  <span><i class="bi bi-clock me-1"></i>60 min</span>
+                  <span>•</span>
+                  <span class="badge-rating"><i class="bi bi-star-fill me-1"></i>4.96 (342)</span>
+                </div>
+                <h4 class="treatment-title"><a href="treatment-details.html?id=hydrafacial-md">Hydrafacial MD® Elite Infusion</a></h4>
+                <p class="treatment-desc">Patented 3-step medical facial combining deep vortex cleansing, painless extraction, and antioxidant peptide infusion.</p>
+                <div class="treatment-card-footer">
+                  <div class="price-box">
+                    <span class="price-label">Starting From</span>
+                    <span class="price-value">₹5,499</span>
+                  </div>
+                  <a href="treatment-details.html?id=hydrafacial-md" class="btn btn-sm btn-primary">
+                    View & Quote &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BioRePeel -->
+          <div class="col-md-6 col-lg-4">
+            <div class="treatment-card">
+              <div class="treatment-card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1512290900672-1f02e6a0d4c8?auto=format&fit=crop&w=900&q=80" alt="BioRePeelCl3 TCA Glow">
+                <span class="treatment-card-badge badge-lumea badge-clay">Chemical Peel</span>
+                <button type="button" class="treatment-fav-btn" data-fav-type="treatments" data-fav-id="biorepeel-glow" data-fav-title="BioRePeelCl3® 35% TCA Glow Peel" aria-label="Save treatment">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+              <div class="treatment-card-body">
+                <div class="treatment-meta-chips">
+                  <span><i class="bi bi-clock me-1"></i>50 min</span>
+                  <span>•</span>
+                  <span class="badge-rating"><i class="bi bi-star-fill me-1"></i>4.92 (218)</span>
+                </div>
+                <h4 class="treatment-title"><a href="treatment-details.html?id=biorepeel-glow">BioRePeelCl3® 35% TCA Glow Peel</a></h4>
+                <p class="treatment-desc">Innovative biphasic medical peel delivering 35% TCA bio-stimulation without painful peeling or visible downtime.</p>
+                <div class="treatment-card-footer">
+                  <div class="price-box">
+                    <span class="price-label">Starting From</span>
+                    <span class="price-value">₹4,899</span>
+                  </div>
+                  <a href="treatment-details.html?id=biorepeel-glow" class="btn btn-sm btn-primary">
+                    View & Quote &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Microneedling -->
+          <div class="col-md-6 col-lg-4">
+            <div class="treatment-card">
+              <div class="treatment-card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=80" alt="Clinical Microneedling + Exosomes">
+                <span class="treatment-card-badge badge-lumea badge-sand">Microneedling</span>
+                <button type="button" class="treatment-fav-btn" data-fav-type="treatments" data-fav-id="medical-microneedling" data-fav-title="Clinical Microneedling + Exosome Infusion" aria-label="Save treatment">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+              <div class="treatment-card-body">
+                <div class="treatment-meta-chips">
+                  <span><i class="bi bi-clock me-1"></i>75 min</span>
+                  <span>•</span>
+                  <span class="badge-rating"><i class="bi bi-star-fill me-1"></i>4.98 (405)</span>
+                </div>
+                <h4 class="treatment-title"><a href="treatment-details.html?id=medical-microneedling">Clinical Microneedling + Exosomes</a></h4>
+                <p class="treatment-desc">Precision collagen induction therapy coupled with billion-exosome bio-regenerative serum for rapid scar and texture repair.</p>
+                <div class="treatment-card-footer">
+                  <div class="price-box">
+                    <span class="price-label">Starting From</span>
+                    <span class="price-value">₹7,999</span>
+                  </div>
+                  <a href="treatment-details.html?id=medical-microneedling" class="btn btn-sm btn-primary">
+                    View & Quote &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- LED Therapy -->
+          <div class="col-md-6 col-lg-4">
+            <div class="treatment-card">
+              <div class="treatment-card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=900&q=80" alt="Tri-Wave LED Therapy">
+                <span class="treatment-card-badge badge-lumea badge-sage">LED Therapy</span>
+                <button type="button" class="treatment-fav-btn" data-fav-type="treatments" data-fav-id="clinical-led-therapy" data-fav-title="Dermalux® Tri-Wave MD Phototherapy" aria-label="Save treatment">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+              <div class="treatment-card-body">
+                <div class="treatment-meta-chips">
+                  <span><i class="bi bi-clock me-1"></i>45 min</span>
+                  <span>•</span>
+                  <span class="badge-rating"><i class="bi bi-star-fill me-1"></i>4.89 (164)</span>
+                </div>
+                <h4 class="treatment-title"><a href="treatment-details.html?id=clinical-led-therapy">Dermalux® Tri-Wave MD Phototherapy</a></h4>
+                <p class="treatment-desc">Medically certified light therapy combining simultaneous Blue 415nm, Red 633nm, and NIR 830nm wavelengths.</p>
+                <div class="treatment-card-footer">
+                  <div class="price-box">
+                    <span class="price-label">Starting From</span>
+                    <span class="price-value">₹2,499</span>
+                  </div>
+                  <a href="treatment-details.html?id=clinical-led-therapy" class="btn btn-sm btn-primary">
+                    View & Quote &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Clarifying Facial -->
+          <div class="col-md-6 col-lg-4">
+            <div class="treatment-card">
+              <div class="treatment-card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=900&q=80" alt="Deep Pore Clarifying Facial">
+                <span class="treatment-card-badge badge-lumea badge-clay">Acne Care</span>
+                <button type="button" class="treatment-fav-btn" data-fav-type="treatments" data-fav-id="clarifying-acne-facial" data-fav-title="Deep Pore Clarifying & Sebum Balance Facial" aria-label="Save treatment">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+              <div class="treatment-card-body">
+                <div class="treatment-meta-chips">
+                  <span><i class="bi bi-clock me-1"></i>60 min</span>
+                  <span>•</span>
+                  <span class="badge-rating"><i class="bi bi-star-fill me-1"></i>4.91 (280)</span>
+                </div>
+                <h4 class="treatment-title"><a href="treatment-details.html?id=clarifying-acne-facial">Deep Pore Clarifying Facial</a></h4>
+                <p class="treatment-desc">Decongesting facial with ultrasonic cavitation, botanical enzymes, and ozone high-frequency anti-bacterial therapy.</p>
+                <div class="treatment-card-footer">
+                  <div class="price-box">
+                    <span class="price-label">Starting From</span>
+                    <span class="price-value">₹3,999</span>
+                  </div>
+                  <a href="treatment-details.html?id=clarifying-acne-facial" class="btn btn-sm btn-primary">
+                    View & Quote &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Morpheus8 RF -->
+          <div class="col-md-6 col-lg-4">
+            <div class="treatment-card">
+              <div class="treatment-card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=80" alt="Morpheus8 Matrix RF">
+                <span class="treatment-card-badge badge-lumea badge-sand">Advanced RF</span>
+                <button type="button" class="treatment-fav-btn" data-fav-type="treatments" data-fav-id="rf-microneedling-lift" data-fav-title="Morpheus8 Matrix RF Micro-Tightening" aria-label="Save treatment">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+              <div class="treatment-card-body">
+                <div class="treatment-meta-chips">
+                  <span><i class="bi bi-clock me-1"></i>90 min</span>
+                  <span>•</span>
+                  <span class="badge-rating"><i class="bi bi-star-fill me-1"></i>4.97 (189)</span>
+                </div>
+                <h4 class="treatment-title"><a href="treatment-details.html?id=rf-microneedling-lift">Morpheus8 Matrix RF Tightening</a></h4>
+                <p class="treatment-desc">Subdermal fractional radiofrequency that sculpts jawlines, tightens tissue, and rebuilds deep collagen.</p>
+                <div class="treatment-card-footer">
+                  <div class="price-box">
+                    <span class="price-label">Starting From</span>
+                    <span class="price-value">₹14,999</span>
+                  </div>
+                  <a href="treatment-details.html?id=rf-microneedling-lift" class="btn btn-sm btn-primary">
+                    View & Quote &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FEATURED PROVIDERS
+         ========================================================================== -->
+    <section class="section-padding bg-surface-subtle">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-end justify-content-between mb-4">
+          <div>
+            <span class="section-eyebrow">Verified Studios & Clinics</span>
+            <h2 class="section-title mb-0">Featured Providers</h2>
+          </div>
+          <a href="providers.html" class="btn btn-outline-primary">
+            Explore All Providers &rarr;
+          </a>
+        </div>
+
+        <div class="row g-4">
+          <!-- Provider 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="provider-card">
+              <div class="provider-card-header">
+                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80" alt="Aesthétika Advanced Dermatology">
+                <div class="provider-avatar-overlay">
+                  <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=400&q=80" alt="Dr. Alisha Merchant">
+                </div>
+              </div>
+              <div class="provider-card-body">
+                <div class="d-flex justify-content-between align-items-start mb-1">
+                  <span class="badge-lumea badge-verified"><i class="bi bi-patch-check-fill"></i> Verified Clinic</span>
+                  <span class="badge-rating"><i class="bi bi-star-fill me-1"></i>4.97 (428)</span>
+                </div>
+                <h4 class="provider-name mt-2"><a href="provider-profile.html?id=prov-aesthetica-dermal">Aesthétika Advanced Dermatology</a></h4>
+                <div class="provider-location"><i class="bi bi-geo-alt-fill text-sage"></i>Bandra West, Mumbai</div>
+                <p class="text-muted small mb-3">Led by Dr. Alisha Merchant (MD), specializing in clinical peeling, precision microneedling, and exosome matrix therapy.</p>
+
+                <div class="provider-slot-badge">
+                  <i class="bi bi-lightning-charge-fill text-sage"></i> Next slot: Today, 3:30 PM
+                </div>
+
+                <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                  <div>
+                    <div class="price-label">Treatments from</div>
+                    <div class="fw-bold text-sage">₹4,899</div>
+                  </div>
+                  <a href="provider-profile.html?id=prov-aesthetica-dermal" class="btn btn-sm btn-outline-primary">
+                    Profile & Slots
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Provider 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="provider-card">
+              <div class="provider-card-header">
+                <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=900&q=80" alt="Lumina Aesthetic Skin Studio">
+                <div class="provider-avatar-overlay">
+                  <img src="https://images.unsplash.com/photo-1594824813627-844a49c336b4?auto=format&fit=crop&w=400&q=80" alt="Meera Nambiar">
+                </div>
+              </div>
+              <div class="provider-card-body">
+                <div class="d-flex justify-content-between align-items-start mb-1">
+                  <span class="badge-lumea badge-verified"><i class="bi bi-patch-check-fill"></i> Verified Specialist</span>
+                  <span class="badge-rating"><i class="bi bi-star-fill me-1"></i>4.94 (310)</span>
+                </div>
+                <h4 class="provider-name mt-2"><a href="provider-profile.html?id=prov-lumina-skin-lab">Lumina Aesthetic Skin Studio</a></h4>
+                <div class="provider-location"><i class="bi bi-geo-alt-fill text-sage"></i>Indiranagar, Bengaluru</div>
+                <p class="text-muted small mb-3">Combining clinical Hydrafacial protocols with sensory lymphatic sculpting for enduring barrier nourishment.</p>
+
+                <div class="provider-slot-badge">
+                  <i class="bi bi-lightning-charge-fill text-sage"></i> Next slot: Today, 4:15 PM
+                </div>
+
+                <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                  <div>
+                    <div class="price-label">Treatments from</div>
+                    <div class="fw-bold text-sage">₹3,999</div>
+                  </div>
+                  <a href="provider-profile.html?id=prov-lumina-skin-lab" class="btn btn-sm btn-outline-primary">
+                    Profile & Slots
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Provider 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="provider-card">
+              <div class="provider-card-header">
+                <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=900&q=80" alt="NovaDerma Medi-Clinic">
+                <div class="provider-avatar-overlay">
+                  <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=400&q=80" alt="Dr. Rohan Mathur">
+                </div>
+              </div>
+              <div class="provider-card-body">
+                <div class="d-flex justify-content-between align-items-start mb-1">
+                  <span class="badge-lumea badge-verified"><i class="bi bi-patch-check-fill"></i> Verified Clinic</span>
+                  <span class="badge-rating"><i class="bi bi-star-fill me-1"></i>4.98 (512)</span>
+                </div>
+                <h4 class="provider-name mt-2"><a href="provider-profile.html?id=prov-novaclinic-dermatology">NovaDerma Medi-Clinic</a></h4>
+                <div class="provider-location"><i class="bi bi-geo-alt-fill text-sage"></i>Vasant Vihar, New Delhi</div>
+                <p class="text-muted small mb-3">Advanced US-FDA approved technologies for Morpheus8 RF tightening, scar remodeling, and precision dermal peels.</p>
+
+                <div class="provider-slot-badge">
+                  <i class="bi bi-lightning-charge-fill text-sage"></i> Next slot: Tomorrow, 10:30 AM
+                </div>
+
+                <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                  <div>
+                    <div class="price-label">Treatments from</div>
+                    <div class="fw-bold text-sage">₹5,499</div>
+                  </div>
+                  <a href="provider-profile.html?id=prov-novaclinic-dermatology" class="btn btn-sm btn-outline-primary">
+                    Profile & Slots
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         HOW BOOKING WORKS
+         ========================================================================== -->
+    <section class="section-padding" id="how-it-works">
+      <div class="container">
+        <div class="text-center section-header">
+          <span class="section-eyebrow">Seamless Booking Engine</span>
+          <h2 class="section-title">How Booking Works on LUMÉA</h2>
+          <p class="section-description">A transparent, step-by-step workflow designed to protect your time and guarantee clinical excellence.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4 col-lg-2 text-center">
+            <div class="lumea-card p-3 h-100">
+              <div class="brand-symbol mx-auto mb-3" style="width:44px; height:44px; font-size:1.15rem;">1</div>
+              <h5 class="mb-2" style="font-size:1rem;">Discover</h5>
+              <p class="text-muted small mb-0">Browse curated treatments filtered by your exact skin goal.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-lg-2 text-center">
+            <div class="lumea-card p-3 h-100">
+              <div class="brand-symbol mx-auto mb-3" style="background:var(--brand-clay); width:44px; height:44px; font-size:1.15rem;">2</div>
+              <h5 class="mb-2" style="font-size:1rem;">Compare</h5>
+              <p class="text-muted small mb-0">Inspect provider credentials, verified reviews & studio photos.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-lg-2 text-center">
+            <div class="lumea-card p-3 h-100">
+              <div class="brand-symbol mx-auto mb-3" style="background:var(--brand-sand-dark); width:44px; height:44px; font-size:1.15rem;">3</div>
+              <h5 class="mb-2" style="font-size:1rem;">Get Quote</h5>
+              <p class="text-muted small mb-0">Customize duration & add-ons with instant price calculation.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-lg-2 text-center">
+            <div class="lumea-card p-3 h-100">
+              <div class="brand-symbol mx-auto mb-3" style="width:44px; height:44px; font-size:1.15rem;">4</div>
+              <h5 class="mb-2" style="font-size:1rem;">Choose Slot</h5>
+              <p class="text-muted small mb-0">Select guaranteed real-time availability on the calendar.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-lg-2 text-center">
+            <div class="lumea-card p-3 h-100">
+              <div class="brand-symbol mx-auto mb-3" style="background:var(--brand-clay); width:44px; height:44px; font-size:1.15rem;">5</div>
+              <h5 class="mb-2" style="font-size:1rem;">Pay Deposit</h5>
+              <p class="text-muted small mb-0">Lock your appointment with a secure protected deposit.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-lg-2 text-center">
+            <div class="lumea-card p-3 h-100">
+              <div class="brand-symbol mx-auto mb-3" style="background:var(--brand-sand-dark); width:44px; height:44px; font-size:1.15rem;">6</div>
+              <h5 class="mb-2" style="font-size:1rem;">Confirmed</h5>
+              <p class="text-muted small mb-0">Receive instant booking ref, calendar sync & prep notes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         REAL-TIME AVAILABILITY PREVIEW
+         ========================================================================== -->
+    <section class="section-padding bg-surface-subtle">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5">
+            <span class="section-eyebrow">Real-Time Scheduling</span>
+            <h2 class="section-title">Zero Back-and-Forth. Live Clinic Slots.</h2>
+            <p class="lead mb-4">No waiting for WhatsApp confirmation or phone callbacks. Our booking engine syncs directly with provider schedules, locking your room and aesthetician instantly.</p>
+
+            <ul class="list-unstyled mb-4">
+              <li class="d-flex align-items-center gap-2 mb-2"><i class="bi bi-check-circle-fill text-sage"></i> Guaranteed calendar reservation</li>
+              <li class="d-flex align-items-center gap-2 mb-2"><i class="bi bi-check-circle-fill text-sage"></i> Flexible 24-hour free rescheduling</li>
+              <li class="d-flex align-items-center gap-2 mb-2"><i class="bi bi-check-circle-fill text-sage"></i> Pre-treatment intake questionnaire sent automatically</li>
+            </ul>
+
+            <a href="booking.html" class="btn btn-primary btn-lg">
+              <i class="bi bi-calendar2-range me-2"></i> Test Live Booking Flow
+            </a>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="lumea-card p-4 shadow-lg">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="mb-0" style="font-family: var(--font-display);">Live Availability Simulator</h5>
+                <span class="badge-lumea badge-sage"><i class="bi bi-dot"></i> Live Engine</span>
+              </div>
+              <div id="homeCalendarMount"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         WHY LUMÉA
+         ========================================================================== -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="text-center section-header">
+          <span class="section-eyebrow">Marketplace Standards</span>
+          <h2 class="section-title">Why Choose LUMÉA</h2>
+          <p class="section-description">Setting a new benchmark for trust, clinical transparency, and aesthetic integrity.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="lumea-card p-4 h-100">
+              <div class="text-sage mb-3" style="font-size: 2rem;"><i class="bi bi-patch-check"></i></div>
+              <h4 style="font-size: 1.3rem;">100% Verified Providers</h4>
+              <p class="text-muted small mb-0">Every dermatology clinic, esthetician, and specialist is rigorously vetted for active licenses, sanitary certifications, and medical device provenance.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="lumea-card p-4 h-100">
+              <div class="text-clay mb-3" style="font-size: 2rem;"><i class="bi bi-calculator"></i></div>
+              <h4 style="font-size: 1.3rem;">Transparent Pricing Quotes</h4>
+              <p class="text-muted small mb-0">No surprise clinic upsells. You see the exact treatment tier, add-ons, and facility fees before making your deposit.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="lumea-card p-4 h-100">
+              <div class="text-sand mb-3" style="font-size: 2rem;"><i class="bi bi-calendar3"></i></div>
+              <h4 style="font-size: 1.3rem;">Real-Time Availability</h4>
+              <p class="text-muted small mb-0">Our live booking engine eliminates double-booking and telephone queues with instant room and therapist locking.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="lumea-card p-4 h-100">
+              <div class="text-sage mb-3" style="font-size: 2rem;"><i class="bi bi-shield-lock"></i></div>
+              <h4 style="font-size: 1.3rem;">Secure Deposit Protection</h4>
+              <p class="text-muted small mb-0">Your deposit is securely held until you check in at the clinic. If the provider cancels or fails to deliver, you receive an immediate refund.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="lumea-card p-4 h-100">
+              <div class="text-clay mb-3" style="font-size: 2rem;"><i class="bi bi-arrow-repeat"></i></div>
+              <h4 style="font-size: 1.3rem;">Easy 1-Click Rescheduling</h4>
+              <p class="text-muted small mb-0">Life happens. Reschedule your appointment online up to 24 hours prior with zero penalty fees.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="lumea-card p-4 h-100">
+              <div class="text-sand mb-3" style="font-size: 2rem;"><i class="bi bi-journal-medical"></i></div>
+              <h4 style="font-size: 1.3rem;">Clinical Prep & Aftercare Guides</h4>
+              <p class="text-muted small mb-0">Every booking comes with customized pre-treatment preparation checklists and dermatologist-approved post-care routines.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         EDITORIAL / JOURNAL PREVIEW
+         ========================================================================== -->
+    <section class="section-padding bg-surface-subtle">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-end justify-content-between mb-4">
+          <div>
+            <span class="section-eyebrow">The Skincare Journal</span>
+            <h2 class="section-title mb-0">Evidence-Based Editorial</h2>
+          </div>
+          <a href="resources.html" class="btn btn-outline-primary">
+            Read Full Journal &rarr;
+          </a>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="lumea-card h-100">
+              <div class="hover-zoom-img" style="aspect-ratio: 16/10;">
+                <img src="https://images.unsplash.com/photo-1512290900672-1f02e6a0d4c8?auto=format&fit=crop&w=600&q=80" alt="Hydrafacial vs Microneedling">
+              </div>
+              <div class="p-4">
+                <span class="badge-lumea badge-sage mb-2">Treatment Guides</span>
+                <h4 style="font-size: 1.3rem;"><a href="resource-details.html?id=guide-hydrafacial-vs-micro">Hydrafacial vs. Microneedling: Which Is Right for Your Goals?</a></h4>
+                <p class="text-muted small mb-3">Comparing suction-infusion vs micro-channel collagen induction for texture, scarring, and radiance.</p>
+                <a href="resource-details.html?id=guide-hydrafacial-vs-micro" class="text-sage fw-bold small text-decoration-none">Read Guide &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="lumea-card h-100">
+              <div class="hover-zoom-img" style="aspect-ratio: 16/10;">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80" alt="Chemical Peel Prep">
+              </div>
+              <div class="p-4">
+                <span class="badge-lumea badge-clay mb-2">Aftercare</span>
+                <h4 style="font-size: 1.3rem;"><a href="resource-details.html?id=guide-chemical-peel-prep">Pre & Post-Peel Protocols: Protecting the Barrier</a></h4>
+                <p class="text-muted small mb-3">How to avoid post-inflammatory hyperpigmentation and maximize cellular turnover safely.</p>
+                <a href="resource-details.html?id=guide-chemical-peel-prep" class="text-sage fw-bold small text-decoration-none">Read Guide &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="lumea-card h-100">
+              <div class="hover-zoom-img" style="aspect-ratio: 16/10;">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="Exosomes in Skincare">
+              </div>
+              <div class="p-4">
+                <span class="badge-lumea badge-sand mb-2">Ingredient Guides</span>
+                <h4 style="font-size: 1.3rem;"><a href="resource-details.html?id=guide-exosomes-skincare">The Science of Exosomes in Collagen Rebuilding</a></h4>
+                <p class="text-muted small mb-3">Why nano-vesicle messenger RNA is revolutionizing clinical skin repair and anti-aging.</p>
+                <a href="resource-details.html?id=guide-exosomes-skincare" class="text-sage fw-bold small text-decoration-none">Read Guide &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FINAL CTA SECTION
+         ========================================================================== -->
+    <section class="section-padding position-relative" style="background: linear-gradient(135deg, var(--brand-sage) 0%, var(--brand-sage-hover) 100%); color: #FFFFFF;">
+      <div class="container text-center py-4">
+        <span class="badge-lumea badge-sand mb-3 text-dark bg-white">Instant Online Reservation</span>
+        <h2 class="display-4 mb-3" style="font-family: var(--font-display); color: #FFFFFF;">
+          Your next treatment is closer than you think.
+        </h2>
+        <p class="lead mb-5 mx-auto" style="max-width: 600px; color: rgba(255, 255, 255, 0.9);">
+          Join thousands of clients discovering verified dermatology clinics and certified skin specialists on LUMÉA.
+        </p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a href="treatments.html" class="btn btn-secondary btn-lg" style="background:#FFFFFF; color:var(--brand-sage); border:none;">
+            <i class="bi bi-search me-2"></i> Explore Treatments
+          </a>
+          <a href="signup.html?type=provider" class="btn btn-outline-secondary btn-lg" style="border-color:rgba(255,255,255,0.7); color:#FFFFFF;">
+            <i class="bi bi-hospital me-2"></i> List Your Clinic
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       MANDATORY FOOTER
+       ========================================================================== -->
+  <footer class="lumea-footer">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Col 1: Brand Info -->
+        <div class="col-lg-4">
+          <div class="footer-brand-name">LUMÉA</div>
+          <div class="footer-tagline">“Discover Better Skin. Book With Confidence.”</div>
+          <p style="color: #A3ABB2; font-size: 0.9rem; line-height: 1.6; max-width: 340px;">
+            The sophisticated clinical marketplace for verified skincare specialists, interactive treatment quotes, and real-time appointment reservations.
+          </p>
+          <div class="footer-social-icons mt-4">
+            <a href="https://instagram.com" class="footer-social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://facebook.com" class="footer-social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://linkedin.com" class="footer-social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://twitter.com" class="footer-social-link" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Explore -->
+        <div class="col-6 col-lg-2">
+          <div class="footer-title">Explore</div>
+          <ul class="footer-nav">
+            <li><a href="treatments.html">Treatments</a></li>
+            <li><a href="providers.html">Providers</a></li>
+            <li><a href="treatments.html">Explore Market</a></li>
+            <li><a href="resources.html">Skincare Journal</a></li>
+            <li><a href="my-bookings.html">My Bookings</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: For Providers -->
+        <div class="col-6 col-lg-3">
+          <div class="footer-title">For Providers</div>
+          <ul class="footer-nav">
+            <li><a href="signup.html?type=provider">Become a Provider</a></li>
+            <li><a href="manage-availability.html">Manage Availability</a></li>
+            <li><a href="provider-setup.html">Clinic Setup</a></li>
+            <li><a href="about.html#verification">Provider Guidelines</a></li>
+            <li><a href="contact.html?subject=partner">Partner With Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Company & Newsletter -->
+        <div class="col-lg-3">
+          <div class="footer-title">Company</div>
+          <ul class="footer-nav mb-4">
+            <li><a href="about.html">About LUMÉA</a></li>
+            <li><a href="contact.html">Contact & Support</a></li>
+            <li><a href="contact.html#faqs">FAQs</a></li>
+            <li><a href="coming-soon.html">Careers</a></li>
+          </ul>
+
+          <div class="footer-title" style="font-size: 0.78rem;">Journal Newsletter</div>
+          <form id="newsletterForm" class="mt-2">
+            <div class="input-group">
+              <input type="email" class="form-control footer-newsletter-input" placeholder="Your email address" required aria-label="Email for newsletter">
+              <button class="btn btn-primary" type="submit" style="border-radius: var(--radius-pill); margin-left: -35px; z-index: 5;">
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 LUMÉA Marketplace Inc. All rights reserved. Non-diagnostic cosmetic & dermatological scheduling platform.
+        </div>
+        <div class="d-flex gap-4">
+          <a href="about.html" class="text-muted text-decoration-none">Privacy Policy</a>
+          <a href="about.html" class="text-muted text-decoration-none">Terms of Service</a>
+          <a href="contact.html" class="text-muted text-decoration-none">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="assets/js/notifications.js"></script>
+  <script src="assets/js/favorites.js"></script>
+  <script src="assets/js/treatments.js"></script>
+  <script src="assets/js/providers.js"></script>
+  <script src="assets/js/quotes.js"></script>
+  <script src="assets/js/calendar.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/search.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Mount demo real-time calendar on home page
+      const mount = document.getElementById('homeCalendarMount');
+      if (mount && window.LumeaCalendar) {
+        new window.LumeaCalendar(mount, {
+          initialDate: new Date(),
+          onSlotSelect: (slot, date) => {
+            window.LumeaNotifications?.info(`Selected slot: ${date.toLocaleDateString('en-US', { month:'short', day:'numeric' })} at ${slot}`);
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

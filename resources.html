@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skincare Journal & Clinical Guides — LUMÉA</title>
+  <meta name="description" content="Evidence-based skincare education, pre-treatment preparation protocols, and dermatologist-vetted aftercare guides.">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <script src="assets/js/theme.js"></script>
+</head>
+<body>
+
+  <!-- Mandatory Navbar -->
+  <header class="lumea-navbar scrolled">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-brand-lumea">
+        <div class="brand-symbol">L</div>
+        <div class="brand-text">
+          <span class="brand-name">LUMÉA</span>
+          <span class="brand-tagline">Skincare Engine</span>
+        </div>
+      </a>
+
+      <ul class="navbar-nav-main">
+        <li class="nav-item-lumea"><a href="index.html" class="nav-link-lumea">Home</a></li>
+        <li class="nav-item-lumea"><a href="treatments.html" class="nav-link-lumea">Treatments</a></li>
+        <li class="nav-item-lumea"><a href="providers.html" class="nav-link-lumea">Providers</a></li>
+        <li class="nav-item-lumea"><a href="resources.html" class="nav-link-lumea active">Journal</a></li>
+        <li class="nav-item-lumea"><a href="about.html" class="nav-link-lumea">About</a></li>
+      </ul>
+
+      <div class="navbar-actions">
+        <button type="button" class="btn-search-trigger" aria-label="Search"><i class="bi bi-search"></i></button>
+        <button type="button" class="btn-theme-toggle" aria-label="Theme toggle"><i class="bi bi-moon-stars-fill"></i></button>
+        <div id="navbarAuthActions" class="d-inline-flex align-items-center gap-2"></div>
+        <a href="booking.html" class="btn btn-primary d-none d-lg-inline-flex">Book a Treatment</a>
+        <button type="button" class="btn-hamburger" aria-label="Mobile menu"><i class="bi bi-list"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop"></div>
+  <aside class="mobile-nav-drawer">
+    <div class="mobile-drawer-header">
+      <div class="d-flex align-items-center gap-2">
+        <div class="brand-symbol" style="width:32px; height:32px;">L</div>
+        <span class="brand-name" style="font-size:1.35rem;">LUMÉA</span>
+      </div>
+      <button type="button" class="btn-close btn-close-drawer"></button>
+    </div>
+    <div class="mobile-drawer-body">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li class="mobile-nav-item"><a href="treatments.html" class="mobile-nav-link">Treatments</a></li>
+        <li class="mobile-nav-item"><a href="providers.html" class="mobile-nav-link">Providers</a></li>
+        <li class="mobile-nav-item"><a href="resources.html" class="mobile-nav-link active">Journal</a></li>
+        <li class="mobile-nav-item"><a href="my-bookings.html" class="mobile-nav-link">My Bookings</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main style="padding-top: calc(var(--navbar-height) + 20px);">
+    <section class="section-padding-sm bg-surface-subtle border-bottom">
+      <div class="container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb small mb-2">
+            <li class="breadcrumb-item"><a href="index.html" class="text-muted text-decoration-none">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Journal</li>
+          </ol>
+        </nav>
+        <h1 class="display-6 mb-1" style="font-family: var(--font-display);">The Skincare Journal</h1>
+        <p class="text-muted small mb-0">Evidence-based clinical guides, pre-treatment safety protocols, and ingredient deep-dives.</p>
+      </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Article 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="lumea-card h-100">
+              <div class="hover-zoom-img" style="aspect-ratio: 16/10;">
+                <img src="https://images.unsplash.com/photo-1512290900672-1f02e6a0d4c8?auto=format&fit=crop&w=700&q=80" alt="Hydrafacial vs Microneedling">
+              </div>
+              <div class="p-4">
+                <span class="badge-lumea badge-sage mb-2">Treatment Guides</span>
+                <h4 style="font-size: 1.3rem;"><a href="resource-details.html?id=guide-hydrafacial-vs-micro">Hydrafacial vs. Microneedling: Which Is Right for Your Skin Goals?</a></h4>
+                <p class="text-muted small mb-3">Comparing suction-infusion vs micro-channel collagen induction for texture, scarring, and radiance.</p>
+                <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                  <span class="text-muted small">5 min read</span>
+                  <a href="resource-details.html?id=guide-hydrafacial-vs-micro" class="text-sage fw-bold small text-decoration-none">Read Guide &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="lumea-card h-100">
+              <div class="hover-zoom-img" style="aspect-ratio: 16/10;">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=700&q=80" alt="Chemical Peel Prep">
+              </div>
+              <div class="p-4">
+                <span class="badge-lumea badge-clay mb-2">Aftercare</span>
+                <h4 style="font-size: 1.3rem;"><a href="resource-details.html?id=guide-chemical-peel-prep">Pre & Post-Peel Protocols: Protecting the Barrier</a></h4>
+                <p class="text-muted small mb-3">How to avoid post-inflammatory hyperpigmentation and maximize cellular turnover safely.</p>
+                <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                  <span class="text-muted small">6 min read</span>
+                  <a href="resource-details.html?id=guide-chemical-peel-prep" class="text-sage fw-bold small text-decoration-none">Read Guide &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="lumea-card h-100">
+              <div class="hover-zoom-img" style="aspect-ratio: 16/10;">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=700&q=80" alt="Exosomes in Skincare">
+              </div>
+              <div class="p-4">
+                <span class="badge-lumea badge-sand mb-2">Ingredient Guides</span>
+                <h4 style="font-size: 1.3rem;"><a href="resource-details.html?id=guide-exosomes-skincare">The Science of Exosomes in Collagen Rebuilding</a></h4>
+                <p class="text-muted small mb-3">Why nano-vesicle messenger RNA is revolutionizing clinical skin repair and anti-aging.</p>
+                <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                  <span class="text-muted small">7 min read</span>
+                  <a href="resource-details.html?id=guide-exosomes-skincare" class="text-sage fw-bold small text-decoration-none">Read Guide &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="lumea-footer">
+    <div class="container text-center">
+      <div class="footer-brand-name">LUMÉA</div>
+      <div class="footer-tagline">“Discover Better Skin. Book With Confidence.”</div>
+      <div class="mt-4 small text-muted">&copy; 2026 LUMÉA Marketplace Inc. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/notifications.js"></script>
+  <script src="assets/js/favorites.js"></script>
+  <script src="assets/js/treatments.js"></script>
+  <script src="assets/js/providers.js"></script>
+  <script src="assets/js/quotes.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/search.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
