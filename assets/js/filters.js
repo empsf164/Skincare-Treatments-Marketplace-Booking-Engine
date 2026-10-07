@@ -193,20 +193,20 @@
           <div class="provider-card">
             <div class="provider-card-header">
               <img src="${p.heroImage}" alt="${p.name}" loading="lazy">
-              <div class="provider-avatar-overlay">
+              <div class="provider-avatar-overlay" title="${p.specialistName}">
                 <img src="${p.avatar}" alt="${p.specialistName}">
               </div>
             </div>
             <div class="provider-card-body">
-              <div class="d-flex justify-content-between align-items-start mb-1">
+              <div class="d-flex justify-content-end align-items-center gap-2 mb-2" style="min-height: 28px;">
                 <span class="badge-lumea badge-verified"><i class="bi bi-patch-check-fill"></i> Verified</span>
                 <span class="badge-rating"><i class="bi bi-star-fill me-1"></i>${p.rating} (${p.reviewsCount})</span>
               </div>
-              <h4 class="provider-name mt-2"><a href="provider-profile.html?id=${p.id}">${p.name}</a></h4>
-              <div class="provider-location"><i class="bi bi-geo-alt-fill text-sage"></i>${p.location}</div>
+              <h4 class="provider-name mt-1"><a href="provider-profile.html?id=${p.id}">${p.name}</a></h4>
+              <div class="provider-location"><i class="bi bi-geo-alt-fill text-sage me-1"></i>${p.location}</div>
               <p class="text-muted small mb-3" style="display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;">${p.bio}</p>
 
-              <div class="provider-slot-badge">
+              <div class="provider-slot-badge mb-3">
                 <i class="bi bi-lightning-charge-fill text-sage"></i> Next slot: ${p.nextAvailableSlot}
               </div>
 

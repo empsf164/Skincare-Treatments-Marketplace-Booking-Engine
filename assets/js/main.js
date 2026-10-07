@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroSearchForm();
   initGsapAnimations();
   highlightActiveNavLink();
+  initBackToTop();
+  initPasswordToggles();
 });
 
 /* ==========================================================================
@@ -153,10 +155,13 @@ function initGsapAnimations() {
 }
 
 /* ==========================================================================
-   Active Link Detection
+   Active Link Detection (Desktop & Mobile Drawer)
    ========================================================================== */
 function highlightActiveNavLink() {
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  let currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  if (!currentPath || currentPath === '') currentPath = 'index.html';
+
+  // Desktop Links
   document.querySelectorAll('.nav-link-lumea').forEach(link => {
     const href = link.getAttribute('href');
     if (href === currentPath || (currentPath === '' && href === 'index.html')) {
@@ -164,5 +169,77 @@ function highlightActiveNavLink() {
     } else {
       link.classList.remove('active');
     }
+  });
+
+  // Mobile / Tablet Drawer Links
+  document.querySelectorAll('.mobile-nav-link').forEach(link => {
+    const href = link.getAttribute('href');
+    const parentItem = link.closest('.mobile-nav-item');
+    if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+      link.classList.add('active');
+      if (parentItem) parentItem.classList.add('active');
+    } else {
+      link.classList.remove('active');
+      if (parentItem) parentItem.classList.remove('active');
+    }
+  });
+}
+
+/* ==========================================================================
+   Back to Top Floating Button (All Pages)
+   ========================================================================== */
+function initBackToTop() {
+  let btn = document.getElementById('backToTopBtn');
+  if (!btn) {
+    btn = document.createElement('button');
+    btn.id = 'backToTopBtn';
+    btn.className = 'back-to-top-btn';
+    btn.setAttribute('type', 'button');
+    btn.setAttribute('aria-label', 'Back to top');
+    btn.setAttribute('title', 'Back to top');
+    btn.innerHTML = '<i class="bi bi-arrow-up"></i>';
+    document.body.appendChild(btn);
+  }
+
+  const handleScroll = () => {
+    if (window.scrollY > 280) {
+      btn.classList.add('show');
+    } else {
+      btn.classList.remove('show');
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
+
+/* ==========================================================================
+   Password Toggle Handler
+   ========================================================================== */
+function initPasswordToggles() {
+  document.querySelectorAll('.btn-toggle-password').forEach(btn => {
+    // Avoid double attaching
+    if (btn.dataset.initialized) return;
+    btn.dataset.initialized = 'true';
+
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      const input = document.getElementById(targetId);
+      if (!input) return;
+
+      const isPass = input.type === 'password';
+      input.type = isPass ? 'text' : 'password';
+      const icon = btn.querySelector('i');
+      if (icon) {
+        icon.className = isPass ? 'bi bi-eye-slash' : 'bi bi-eye';
+      }
+    });
   });
 }

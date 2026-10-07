@@ -22,14 +22,6 @@
 <body>
 
   <div class="auth-page-wrapper">
-    <!-- Top Action Controls (Back to home) -->
-    <div class="auth-top-actions">
-      <a href="index.html" class="auth-back-link">
-        <i class="bi bi-arrow-left"></i>
-        <span>Back to Home</span>
-      </a>
-    </div>
-
     <main class="w-100" style="max-width: 520px;">
       <div class="auth-card">
         <!-- Brand Name inside Box in Top Center -->
@@ -92,16 +84,26 @@
             </div>
           </div>
 
-          <!-- Password Input (Separate Line) -->
+          <!-- Password Input (Separate Line with Eye Toggle Icon) -->
           <div class="mb-3">
             <label class="form-label fw-semibold small" for="signupPass">Password *</label>
-            <input type="password" class="form-control" id="signupPass" placeholder="Create a secure password" required>
+            <div class="position-relative">
+              <input type="password" class="form-control pe-5" id="signupPass" placeholder="Create a secure password" required>
+              <button type="button" class="btn-toggle-password" data-target="signupPass" aria-label="Toggle password visibility">
+                <i class="bi bi-eye"></i>
+              </button>
+            </div>
           </div>
 
-          <!-- Confirm Password Input (Separate Line) -->
+          <!-- Confirm Password Input (Separate Line with Eye Toggle Icon) -->
           <div class="mb-3">
             <label class="form-label fw-semibold small" for="signupPassConfirm">Confirm Password *</label>
-            <input type="password" class="form-control" id="signupPassConfirm" placeholder="Confirm your password" required>
+            <div class="position-relative">
+              <input type="password" class="form-control pe-5" id="signupPassConfirm" placeholder="Confirm your password" required>
+              <button type="button" class="btn-toggle-password" data-target="signupPassConfirm" aria-label="Toggle password visibility">
+                <i class="bi bi-eye"></i>
+              </button>
+            </div>
           </div>
 
           <!-- Terms Checkbox (Separate Line) -->

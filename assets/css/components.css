@@ -366,11 +366,31 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.95rem 0;
+  padding: 0.95rem 1rem;
   color: var(--text-primary);
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.mobile-nav-link:hover {
+  background-color: var(--bg-surface-subtle);
+  color: var(--brand-sage);
+}
+
+.mobile-nav-link.active,
+.mobile-nav-item.active > .mobile-nav-link {
+  color: var(--brand-sage) !important;
+  background-color: var(--brand-sage-light) !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="dark"] .mobile-nav-link.active,
+[data-theme="dark"] .mobile-nav-item.active > .mobile-nav-link {
+  color: #FFFFFF !important;
+  background-color: var(--brand-sage-light) !important;
 }
 
 .mobile-dropdown-content {
@@ -746,33 +766,68 @@
 .provider-card-header {
   position: relative;
   aspect-ratio: 16 / 9;
-  overflow: hidden;
+  background-color: var(--bg-surface-subtle);
 }
 
-.provider-card-header img {
+.provider-card-header > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .provider-avatar-overlay {
   position: absolute;
   bottom: -22px;
   left: 20px;
-  width: 64px;
-  height: 64px;
+  width: 62px;
+  height: 62px;
   border-radius: 50%;
   border: 3px solid var(--bg-surface);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
   background: var(--bg-surface);
+  z-index: 4;
+}
+
+.provider-avatar-overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .provider-card-body {
-  padding: 1.8rem 1.35rem 1.35rem 1.35rem;
+  padding: 1.6rem 1.35rem 1.35rem 1.35rem;
   flex: 1;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+/* Category Filter Chips */
+.filter-category-chip {
+  border-radius: var(--radius-pill);
+  padding: 0.45rem 1.15rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  color: var(--text-secondary);
+}
+
+.filter-category-chip:hover {
+  background-color: var(--brand-sage-light);
+  border-color: var(--brand-sage);
+  color: var(--brand-sage);
+}
+
+.filter-category-chip.active {
+  background-color: var(--brand-sage) !important;
+  border-color: var(--brand-sage) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(61, 90, 76, 0.25);
+  font-weight: 600;
 }
 
 .provider-name-box {
@@ -1728,10 +1783,132 @@
   border: 1px solid var(--border-subtle);
   background: var(--bg-surface);
   transition: all var(--transition-fast);
+  word-break: break-word;
 }
 
 .map-card-tab.active, .map-card-tab:hover {
   border-color: var(--brand-sage);
   background: var(--bg-surface-subtle);
 }
+
+/* ==========================================================================
+   Back to Top Floating Button (All Pages)
+   ========================================================================== */
+.back-to-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--brand-sage);
+  color: #FFFFFF !important;
+  border: none;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  cursor: pointer;
+  z-index: 1040;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  transition: opacity var(--transition-normal), transform var(--transition-normal), background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.back-to-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top-btn:hover {
+  background: var(--brand-sage-hover);
+  box-shadow: 0 8px 25px rgba(46, 69, 58, 0.35);
+  transform: translateY(-3px);
+  color: #FFFFFF !important;
+}
+
+.back-to-top-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 576px) {
+  .back-to-top-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+    font-size: 1.15rem;
+  }
+}
+
+/* ==========================================================================
+   Password Visibility Toggle Eye Button
+   ========================================================================== */
+.btn-toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px 6px;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition-fast);
+  z-index: 5;
+}
+
+.btn-toggle-password:hover {
+  color: var(--brand-sage);
+}
+
+/* ==========================================================================
+   Global & Footer Link Hover Enhancements
+   ========================================================================== */
+.footer-nav a {
+  transition: all var(--transition-fast);
+  display: inline-block;
+}
+
+.footer-nav a:hover {
+  color: var(--brand-sage) !important;
+  transform: translateX(4px);
+}
+
+.footer-bottom a {
+  transition: color var(--transition-fast);
+}
+
+.footer-bottom a:hover {
+  color: var(--brand-sage) !important;
+  text-decoration: underline !important;
+}
+
+.auth-card a,
+.auth-page-wrapper a {
+  transition: color var(--transition-fast), text-decoration var(--transition-fast);
+}
+
+.auth-card a:hover,
+.auth-page-wrapper a:hover {
+  color: var(--brand-sage-hover) !important;
+  text-decoration: underline !important;
+}
+
+.text-hover-sage {
+  transition: color var(--transition-fast);
+}
+
+.text-hover-sage:hover {
+  color: var(--brand-sage) !important;
+  text-decoration: underline !important;
+}
+
 
